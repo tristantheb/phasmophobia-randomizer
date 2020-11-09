@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="340"
+   height="340"
+   viewBox="-189 -189 340 340"
+   xml:lang="fr"
+   version="1.1"
+   id="svg228"
+   sodipodi:docname="wheel.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata234">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs232" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     id="namedview230"
+     showgrid="false"
+     inkscape:zoom="2.4973545"
+     inkscape:cx="105.37625"
+     inkscape:cy="156.9661"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg228" />
+  <g
+     pointer-events="none"
+     id="g224"
+     transform="matrix(0.99941211,0,0,0.99941211,-19,-19.000001)">
+    <g
+       id="g50">
+      <path
+         d="M 170.09916,-0.53438403 A 170.1,170.1 0 0 1 164.16486,44.541078 L 0,0 Z"
+         class="cone   "
+         id="path2"
+         inkscape:connector-curvature="0"
+         style="fill:#c8c4b7" />
+      <path
+         d="M 164.44148,43.508727 A 170.1,170.1 0 0 1 147.043,85.51237 L 0,0 Z"
+         class="cone   "
+         id="path4"
+         inkscape:connector-curvature="0"
+         style="fill:#918a6f" />
+      <path
+         d="M 147.57739,84.58679 A 170.1,170.1 0 0 1 119.9004,120.65614 L 0,0 Z"
+         class="cone   "
+         id="path6"
+         inkscape:connector-curvature="0"
+         style="fill:#454837" />
+      <path
+         d="M 120.65614,119.9004 A 170.1,170.1 0 0 1 84.58679,147.57739 L 0,0 Z"
+         class="cone   "
+         id="path8"
+         inkscape:connector-curvature="0"
+         style="fill:#c8c4b7" />
+      <path
+         d="M 85.51237,147.043 A 170.1,170.1 0 0 1 43.508727,164.44148 L 0,0 Z"
+         class="cone   "
+         id="path10"
+         inkscape:connector-curvature="0"
+         style="fill:#918a6f" />
+      <path
+         d="m 44.541078,164.16486 a 170.1,170.1 0 0 1 -45.07546203,5.9343 L 0,0 Z"
+         class="cone   "
+         id="path12"
+         inkscape:connector-curvature="0"
+         style="fill:#454837" />
+      <path
+         d="M 0.53438403,170.09916 A 170.1,170.1 0 0 1 -44.541078,164.16486 L 0,0 Z"
+         class="cone   "
+         id="path14"
+         inkscape:connector-curvature="0"
+         style="fill:#c8c4b7" />
+      <path
+         d="M -43.508727,164.44148 A 170.1,170.1 0 0 1 -85.51237,147.043 L 0,0 Z"
+         class="cone   "
+         id="path16"
+         inkscape:connector-curvature="0"
+         style="fill:#918a6f" />
+      <path
+         d="M -84.58679,147.57739 A 170.1,170.1 0 0 1 -120.65614,119.9004 L 0,0 Z"
+         class="cone   "
+         id="path18"
+         inkscape:connector-curvature="0"
+         style="fill:#454837" />
+      <path
+         d="M -119.9004,120.65614 A 170.1,170.1 0 0 1 -147.57739,84.58679 L 0,0 Z"
+         class="cone   "
+         id="path20"
+         inkscape:connector-curvature="0"
+         style="fill:#c8c4b7" />
+      <path
+         d="M -147.043,85.51237 A 170.1,170.1 0 0 1 -164.44148,43.508727 L 0,0 Z"
+         class="cone   "
+         id="path22"
+         inkscape:connector-curvature="0"
+         style="fill:#918a6f" />
+      <path
+         d="m -164.16486,44.541078 a 170.1,170.1 0 0 1 -5.9343,-45.07546203 L 0,0 Z"
+         class="cone   "
+         id="path24"
+         inkscape:connector-curvature="0"
+         style="fill:#454837" />
+      <path
+         d="m -170.09916,0.53438403 a 170.1,170.1 0 0 1 5.9343,-45.07546203 L 0,0 Z"
+         class="cone   "
+         id="path26"
+         inkscape:connector-curvature="0"
+         style="fill:#c8c4b7" />
+      <path
+         d="M -164.44148,-43.508727 A 170.1,170.1 0 0 1 -147.043,-85.51237 L 0,0 Z"
+         class="cone   "
+         id="path28"
+         inkscape:connector-curvature="0"
+         style="fill:#918a6f" />
+      <path
+         d="m -147.57739,-84.58679 a 170.1,170.1 0 0 1 27.67699,-36.06935 L 0,0 Z"
+         class="cone   "
+         id="path30"
+         inkscape:connector-curvature="0"
+         style="fill:#454837" />
+      <path
+         d="m -120.65614,-119.9004 a 170.1,170.1 0 0 1 36.06935,-27.67699 L 0,0 Z"
+         class="cone   "
+         id="path32"
+         inkscape:connector-curvature="0"
+         style="fill:#c8c4b7" />
+      <path
+         d="m -85.51237,-147.043 a 170.1,170.1 0 0 1 42.003643,-17.39848 L 0,0 Z"
+         class="cone   "
+         id="path34"
+         inkscape:connector-curvature="0"
+         style="fill:#918a6f" />
+      <path
+         d="m -44.541078,-164.16486 a 170.1,170.1 0 0 1 45.07546203,-5.9343 L 0,0 Z"
+         class="cone   "
+         id="path36"
+         inkscape:connector-curvature="0"
+         style="fill:#454837" />
+      <path
+         d="m -0.53438403,-170.09916 a 170.1,170.1 0 0 1 45.07546203,5.9343 L 0,0 Z"
+         class="cone   "
+         id="path38"
+         inkscape:connector-curvature="0"
+         style="fill:#c8c4b7" />
+      <path
+         d="M 43.508727,-164.44148 A 170.1,170.1 0 0 1 85.51237,-147.043 L 0,0 Z"
+         class="cone   "
+         id="path40"
+         inkscape:connector-curvature="0"
+         style="fill:#918a6f" />
+      <path
+         d="m 84.58679,-147.57739 a 170.1,170.1 0 0 1 36.06935,27.67699 L 0,0 Z"
+         class="cone   "
+         id="path42"
+         inkscape:connector-curvature="0"
+         style="fill:#454837" />
+      <path
+         d="m 119.9004,-120.65614 a 170.1,170.1 0 0 1 27.67699,36.06935 L 0,0 Z"
+         class="cone   "
+         id="path44"
+         inkscape:connector-curvature="0"
+         style="fill:#c8c4b7" />
+      <path
+         d="m 147.043,-85.51237 a 170.1,170.1 0 0 1 17.39848,42.003643 L 0,0 Z"
+         class="cone   "
+         id="path46"
+         inkscape:connector-curvature="0"
+         style="fill:#918a6f" />
+      <path
+         d="m 164.16486,-44.541078 a 170.1,170.1 0 0 1 5.9343,45.07546203 L 0,0 Z"
+         class="cone   "
+         id="path48"
+         inkscape:connector-curvature="0"
+         style="fill:#454837" />
+    </g>
+    <g
+       id="g222">
+      <defs
+         id="defs76">
+        <path
+           id="textPath-0"
+           d="M 153.65034,18.757014 16.884653,2.0612103"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-1"
+           d="M 143.56016,57.885519 15.775842,6.3610461"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-2"
+           d="M 123.68659,93.069222 13.591933,10.227387"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-3"
+           d="M 95.383988,121.91041 10.481757,13.396749"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-4"
+           d="M 60.581121,142.44361 6.6572661,15.653144"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-5"
+           d="M 21.649751,153.26951 2.3790935,16.842803"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-6"
+           d="M -18.757014,153.65034 -2.0612103,16.884653"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-7"
+           d="M -57.885519,143.56016 -6.3610461,15.775842"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-8"
+           d="M -93.069222,123.68659 -10.227387,13.591933"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-9"
+           d="M -121.91041,95.383988 -13.396749,10.481757"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-10"
+           d="M -142.44361,60.581121 -15.653144,6.6572661"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-11"
+           d="M -153.26951,21.649751 -16.842803,2.3790935"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-12"
+           d="M -153.65034,-18.757014 -16.884653,-2.0612103"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-13"
+           d="M -143.56016,-57.885519 -15.775842,-6.3610461"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-14"
+           d="m -123.68659,-93.069222 110.094657,82.841835"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-15"
+           d="m -95.383988,-121.91041 84.902231,108.513661"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-16"
+           d="M -60.581121,-142.44361 -6.6572661,-15.653144"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-17"
+           d="M -21.649751,-153.26951 -2.3790935,-16.842803"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-18"
+           d="M 18.757014,-153.65034 2.0612103,-16.884653"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-19"
+           d="M 57.885519,-143.56016 6.3610461,-15.775842"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-20"
+           d="M 93.069222,-123.68659 10.227387,-13.591933"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-21"
+           d="M 121.91041,-95.383988 13.396749,-10.481757"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-22"
+           d="M 142.44361,-60.581121 15.653144,-6.6572661"
+           inkscape:connector-curvature="0" />
+        <path
+           id="textPath-23"
+           d="M 153.26951,-21.649751 16.842803,-2.3790935"
+           inkscape:connector-curvature="0" />
+      </defs>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text82"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-0"
+           startOffset="0"
+           id="textPath80"><tspan
+   alignment-baseline="auto"
+   id="tspan78"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text88"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-1"
+           startOffset="0"
+           id="textPath86"><tspan
+   alignment-baseline="auto"
+   id="tspan84"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text94"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-2"
+           startOffset="0"
+           id="textPath92"><tspan
+   alignment-baseline="auto"
+   id="tspan90"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text100"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-3"
+           startOffset="0"
+           id="textPath98"><tspan
+   alignment-baseline="auto"
+   id="tspan96"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text106"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-4"
+           startOffset="0"
+           id="textPath104"><tspan
+   alignment-baseline="auto"
+   id="tspan102"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text112"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-5"
+           startOffset="0"
+           id="textPath110"><tspan
+   alignment-baseline="auto"
+   id="tspan108"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text118"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-6"
+           startOffset="0"
+           id="textPath116"><tspan
+   alignment-baseline="auto"
+   id="tspan114"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text124"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-7"
+           startOffset="0"
+           id="textPath122"><tspan
+   alignment-baseline="auto"
+   id="tspan120"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text130"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-8"
+           startOffset="0"
+           id="textPath128"><tspan
+   alignment-baseline="auto"
+   id="tspan126"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text136"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-9"
+           startOffset="0"
+           id="textPath134"><tspan
+   alignment-baseline="auto"
+   id="tspan132"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text142"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-10"
+           startOffset="0"
+           id="textPath140"><tspan
+   alignment-baseline="auto"
+   id="tspan138"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text148"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-11"
+           startOffset="0"
+           id="textPath146"><tspan
+   alignment-baseline="auto"
+   id="tspan144"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text154"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-12"
+           startOffset="0"
+           id="textPath152"><tspan
+   alignment-baseline="auto"
+   id="tspan150"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text160"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-13"
+           startOffset="0"
+           id="textPath158"><tspan
+   alignment-baseline="auto"
+   id="tspan156"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text166"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-14"
+           startOffset="0"
+           id="textPath164"><tspan
+   alignment-baseline="auto"
+   id="tspan162"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text172"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-15"
+           startOffset="0"
+           id="textPath170"><tspan
+   alignment-baseline="auto"
+   id="tspan168"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text178"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-16"
+           startOffset="0"
+           id="textPath176"><tspan
+   alignment-baseline="auto"
+   id="tspan174"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text184"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-17"
+           startOffset="0"
+           id="textPath182"><tspan
+   alignment-baseline="auto"
+   id="tspan180"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text190"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-18"
+           startOffset="0"
+           id="textPath188"><tspan
+   alignment-baseline="auto"
+   id="tspan186"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text196"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-19"
+           startOffset="0"
+           id="textPath194"><tspan
+   alignment-baseline="auto"
+   id="tspan192"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text202"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-20"
+           startOffset="0"
+           id="textPath200"><tspan
+   alignment-baseline="auto"
+   id="tspan198"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text208"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-21"
+           startOffset="0"
+           id="textPath206"><tspan
+   alignment-baseline="auto"
+   id="tspan204"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text214"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-22"
+           startOffset="0"
+           id="textPath212"><tspan
+   alignment-baseline="auto"
+   id="tspan210"
+   style="fill:#000000" />
+</textPath>
+      </text>
+      <text
+         font-size="22.68"
+         height="20"
+         class="label cone   "
+         dy="0.30000001em"
+         id="text220"
+         style="font-size:22.68000031px;text-anchor:start">
+        <textPath
+           xlink:href="#textPath-23"
+           startOffset="0"
+           id="textPath218"><tspan
+   alignment-baseline="auto"
+   id="tspan216"
+   style="fill:#000000" />
+</textPath>
+      </text>
+    </g>
+  </g>
+  <circle
+     r="170.10001"
+     pointer-events="fill"
+     id="circle226"
+     cx="0"
+     cy="-38"
+     style="fill:url(#pattern)" />
+</svg>

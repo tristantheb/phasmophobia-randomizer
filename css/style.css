@@ -1,0 +1,347 @@
+/**
+ * @author tristantheb
+ * @copyright November 2020
+ * @version 0.1.0
+ * All right reserved to tristantheb Production
+ */
+:root {
+  --black: #0b0e13;
+  --dark-gray: #2D2E35;
+  --gray: #383c48;
+  --light-gray: #ababbe;
+  --green: #090;
+  --red: #c00;
+  --blue: #29b;
+  --white: #fff;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--black) url('../img/background.png') repeat;
+  color: var(--gray);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4em;
+  margin: .1em 0;
+}
+
+h2 {
+  font-size: 2em;
+  margin: .25em 0;
+}
+
+h3 {
+  color: var(--red);
+}
+
+h3,
+h4 {
+  margin: 0;
+}
+
+header,
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+}
+
+a,
+a:link {
+  color: var(--light-gray);
+}
+
+a:hover {
+  color: var(--white);
+}
+
+header::after {
+  animation: lightBlink 4s ease 0s infinite;
+  content: "";
+  box-shadow: 0 0 110px 4px var(--white);
+  display: block;
+  height: 10px;
+  left: 30%;
+  position: absolute;
+  top: -10px;
+  width: 40%;
+}
+
+header p {
+  color: var(--light-gray);
+}
+
+footer {
+  background: var(--dark-gray);
+  color: var(--white);
+  padding: 1vw;
+  text-align: center;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-item {
+  list-style: none;
+}
+
+.menu-item a {
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 10px 25px;
+  text-decoration: none;
+}
+
+.menu-item a:hover {
+  background-color: var(--light-gray);
+}
+
+/**
+ * Global page content
+ */
+button,
+input,
+select {
+  font-weight: bold;
+  padding: .75em 1.25em;
+}
+
+select {
+  margin-bottom: 1em;
+}
+
+input[type="text"],
+input[type="button"],
+button {
+  background-color: white;
+  box-shadow: inset 0 0 10px var(--gray);
+  border: 3px solid var(--gray);
+}
+
+input[type="button"] {
+  width: 80%;
+}
+
+input[type="text"]:focus {
+  box-shadow: inset 0 0 5px var(--gray);
+}
+
+input[type="submit"],
+select {
+  background-color: white;
+  box-shadow: inset 0 0 10px var(--gray);
+  border: 3px solid var(--gray);
+}
+
+label {
+  align-items: center;
+  display: flex;
+  font-size: 1.25em;
+  font-weight: bold;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+label span,
+input[type="text"],
+select {
+  width: 100%;
+}
+
+input[name="game_style"] {
+  display: none;
+}
+
+input[name="game_style"]+.table_game {
+  display: none;
+}
+
+input[name="game_style"]:checked+.table_game {
+  display: block;
+}
+
+label,
+.row {
+  flex-direction: column;
+}
+
+.row>label {
+  width: inherit;
+  margin: auto;
+}
+
+.table_game {
+  background-color: var(--light-gray);
+  border-radius: 20px;
+  box-shadow: 0 0 0 2px var(--black), 0 0 0 5px var(--dark-gray), 0 0 0 8px var(--black), 0 0 0 12px var(--gray), inset 0 0 30px;
+  color: var(--gray);
+  margin: 40px auto;
+  padding: 1em 2em;
+  width: 90%;
+}
+
+.table_game form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4 {
+  text-align: center;
+  width: 100%;
+}
+
+#animated_block {
+  background: rgba(0, 0, 0, .85);
+  color: var(--white);
+  display: none;
+  height: 100vh;
+  padding-top: 20vh;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 2;
+}
+
+#wheel {
+  animation: rotate 10s linear 0s infinite;
+  height: 400%;
+  left: 0;
+  position: absolute;
+  top: -150%;
+  width: 100%;
+}
+
+.wheel_block {
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.wheel_block p {
+  background: rgba(0, 0, 0, .85);
+  border-radius: 5px;
+  color: var(--white);
+  display: none;
+  font-size: 3rem;
+  margin: 0 auto;
+  padding: 4px;
+  position: relative;
+  top: calc(50% - 3rem);
+  z-index: 1;
+  width: 50%;
+}
+
+.hunter_name {
+  font-weight: bold;
+}
+
+/**
+ * Specific stuff
+ */
+.info-box {
+  background-color: var(--blue);
+  border-radius: 3px;
+  color: var(--white);
+  padding: 12px;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+
+  label span,
+  input[type="text"],
+  select {
+    width: 50%;
+  }
+
+  #hunt_form {
+    width: 75%;
+  }
+
+  .table_game {
+    width: 75%;
+  }
+
+  label,
+  .row {
+    flex-direction: row;
+  }
+
+  .col-1 {
+    width: 75%;
+  }
+
+  .col-2 {
+    width: 50%;
+  }
+
+  .col-4 {
+    text-align: initial;
+    width: 25%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lightBlink {
+  63% {
+    box-shadow: 0 0 110px 4px var(--white);
+  }
+
+  64% {
+    box-shadow: 0 0 110px 4px transparent;
+  }
+
+  66% {
+    box-shadow: 0 0 110px 4px var(--white);
+  }
+
+  67% {
+    box-shadow: 0 0 110px 4px transparent;
+  }
+
+  69% {
+    box-shadow: 0 0 110px 4px var(--white);
+  }
+}
