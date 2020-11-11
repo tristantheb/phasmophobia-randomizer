@@ -9,7 +9,7 @@
   <meta property="og:title" content="<?php echo PAGE_TITLE; ?>" />
   <meta property="og:description" content="Phasmophobia Randomizer is a random game generator that will mix objects and maps to make you play the game differently." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.phasmo-randomizer.site/" />
+  <meta property="og:url" content="https://www.phasmo-randomizer.site" />
   <meta property="og:image" content="https://www.phasmo-randomizer.site/img/phasmophobia.jpg" />
   <meta name=”twitter:card” content="summary" />
   <meta name=”twitter:site” content="@phasophobiarandomizer" />
@@ -17,6 +17,7 @@
   <meta name=”twitter:description” content="Phasmophobia Randomizer is a random game generator that will mix objects and maps to make you play the game differently." />
   <meta name=”twitter:image” content="https://www.phasmo-randomizer.site/img/phasmophobia.jpg" />
   <title><?php echo PAGE_TITLE; ?></title>
-  <link rel="stylesheet" href="css/style.css?v=<?php echo $version; ?>">
+  <link rel="canonical" href="https://www.phasmo-randomizer.site">
+  <link rel="stylesheet" href="./css/style.min.css?v=<?php echo $version; ?>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>

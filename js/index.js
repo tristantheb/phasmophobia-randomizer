@@ -2,7 +2,16 @@ const appHunt = new AppHunt();
 const appSafari = new AppSafari();
 const TIMEOUT_DELAY = 5000;
 
+var SHOW_ANIMATION = true;
+
 document.addEventListener("DOMContentLoaded", function pageLoaded() {
+  /* When page is loaded, hide error block */
+  $('#errBlock').hide();
+  const $wheelAnim = document.querySelector("#wheelAnim");
+  $wheelAnim.addEventListener("click", function changeCheck() {
+    SHOW_ANIMATION = this.checked ? true : false;
+  }, this)
+
   /**
    * Hunt mode
    */
@@ -21,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
     event.preventDefault();
     let canRender = false;
     appHunt.reset();
+    appSafari.reset();
     let form = new FormData($formHunt);
     for (const entry of form.entries()) {
       if (!!entry[1]) {
@@ -30,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
     }
 
     if(canRender) {
-      animateRender(htmlRender, appHunt);
+      SHOW_ANIMATION ? animateRender(htmlRender, appHunt) : htmlRender(appHunt);
     }
   });
 
@@ -46,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
 
   $formSafari.addEventListener("submit", function submitForm(event) {
     event.preventDefault();
+    appHunt.reset();
     appSafari.reset();
     let form = new FormData($formSafari);
     for (const entry of form.entries()) {
@@ -53,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
         appSafari.setHunter(entry[1]);
       }
     }
-    animateRender(htmlRender, appSafari);
+    SHOW_ANIMATION ? animateRender(htmlRender, appSafari) : htmlRender(appSafari);
   });
 
   /**
@@ -65,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
     var canRender = appSafari.generateItem(hunter);
 
     if(canRender) {
-      animateOneItem(htmlRender, appSafari, hunter);
+      SHOW_ANIMATION ? animateRender(htmlRender, appSafari, hunter) : htmlRender(appSafari);
     }
   }
 
@@ -97,14 +108,14 @@ function htmlRender(app) {
     const hunter = hunters[i].getAsObject();
     let hunt = i + 1
     const $hunterList = document.querySelector("#hunter-" + hunt);
-    $hunterList.innerHTML = "<p class=\"hunter_name\">" + hunter.username + "</p>";
+    $hunterList.innerHTML = "<p class=\"hunter_name t-center\">" + hunter.username + "</p>";
     let li = "";
     hunter.itemList.forEach(list => {
       let item = checkOnDualList(list[0], items);
       item = !item ? checkOnDualList(list[0], itemsLights) : item;
-      li += "<li>" + item + "</li>";
+      li += "<li><img src=\"./img/" + list[0] + ".png\" alt=\"" + item + "\"> " + item + "</li>";
     });
-    $hunterList.innerHTML += "<ul>" + li + "</ul>";
+    $hunterList.innerHTML += "<ul class=\"items-list\">" + li + "</ul>";
   }
 }
 
@@ -173,19 +184,10 @@ function animateOneItem(callback, app, hunter) {
  * @param {string} param2 Text of an element
  */
 function textRender(param1, param2) {
+  if (typeof param1 !== "string" || typeof param2 !== "string") {
+    return throwError("Wrong parameter detected when the wheel try to who text");
+  }
+
   $('#wheel_hunter').html(param1);
   $('#animated_text').html(param2).fadeIn(500).delay(3000).fadeOut(500);
-}
-
-function playAudio(fileName, soundLevel = 0.2, loop = false, endLoopDelay = TIMEOUT_DELAY) {
-  let audio = new Audio('sounds/' + fileName + '.wav');
-  audio.volume = soundLevel;
-  audio.loop = loop;
-  audio.muted = false;
-  audio.play();
-
-  window.setTimeout(() => {
-    audio.muted = true;
-    audio.loop = false;
-  }, endLoopDelay);
 }

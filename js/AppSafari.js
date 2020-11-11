@@ -53,26 +53,32 @@ function AppSafari() {
    * @param {Hunter} targeted_hunter The Hunter who is to receive the object(s)
    */
   this.generateItem = function generateItem(targeted_hunter) {
-    let u = null;
-    while (u === null) {
-      u = getRandomInt(safariItems.length);
+    if (targeted_hunter.getItems().length >= 7) {
+      throwError("Limit of items by players is reached.");
+      return;
     }
-    
-    let v = 0;
-    if (hunters.length > 0) {
-      hunters.forEach(hunter => {
-        hunter.getItems().forEach(item => {
-          if (item[0] == items[u][0]) v++;
+    for (let i = 0; i < 1; i++) {
+      let u = null;
+      while (u === null) {
+        u = getRandomInt(safariItems.length);
+      }
+      
+      let v = 0;
+      if (hunters.length > 0) {
+        hunters.forEach(hunter => {
+          hunter.getItems().forEach(item => {
+            if (item[0] == items[u][0]) v++;
+          });
         });
-      });
-    }
+      }
 
-    if (v < items[u][1] && !targeted_hunter.getItems().includes(items[u])) {
-      // Push the picked item on the hunter items list
-      targeted_hunter.setItem(safariItems[u]);
-      return true;
-    } else {
-      i--;
+      if (v < items[u][1] && !targeted_hunter.getItems().includes(items[u])) {
+        // Push the picked item on the hunter items list
+        targeted_hunter.setItem(safariItems[u]);
+        return true;
+      } else {
+        i--;
+      }
     }
   }
 

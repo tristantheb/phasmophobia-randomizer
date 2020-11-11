@@ -1,7 +1,7 @@
-/**
+/*!
  * @author tristantheb
  * @copyright November 2020
- * @version 0.1.0
+ * @version 0.1.3
  * All right reserved to tristantheb Production
  */
 :root {
@@ -9,8 +9,8 @@
   --dark-gray: #2D2E35;
   --gray: #383c48;
   --light-gray: #ababbe;
-  --green: #090;
-  --red: #c00;
+  --green: #494;
+  --red: #c44;
   --blue: #29b;
   --white: #fff;
 }
@@ -183,6 +183,12 @@ label,
   margin: auto;
 }
 
+.check {
+  display: inline;
+  font-size: inherit;
+  width: auto;
+}
+
 .table_game {
   background-color: var(--light-gray);
   border-radius: 20px;
@@ -257,11 +263,27 @@ label,
   font-weight: bold;
 }
 
+.items-list {
+  list-style: none;
+}
+
+.items-list img {
+  vertical-align: middle;
+  width: 32px;
+}
+
 /**
  * Specific stuff
  */
 .info-box {
   background-color: var(--blue);
+  border-radius: 3px;
+  color: var(--white);
+  padding: 12px;
+}
+
+.error-box {
+  background-color: var(--red);
   border-radius: 3px;
   color: var(--white);
   padding: 12px;

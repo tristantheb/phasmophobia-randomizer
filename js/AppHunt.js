@@ -90,8 +90,16 @@ function AppHunt() {
    * @param {Hunter} targeted_hunter The Hunter who is to receive the object(s)
    */
   function generateItems(max, targeted_hunter) {
+    if (!targeted_hunter || typeof max != "number") {
+      throwError("No player was set to execute this command.");
+      return;
+    }
     generateLight(targeted_hunter);
     for (let i = 0; i < max; i++) {
+      if (targeted_hunter.getItems().length >= 7) {
+        throwError("Limit of items by players is reached.");
+        return;
+      }
       let u = null;
       while (u === null) {
         u = getRandomInt(items.length);
@@ -101,8 +109,7 @@ function AppHunt() {
       if (hunters.length > 0) {
         hunters.forEach(hunter => {
           hunter.getItems().forEach(item => {
-            console.log(item, items[u]);
-            if (item == items[u]) v++;
+            if (item[0] == items[u][0]) v++;
           });
         });
       }
