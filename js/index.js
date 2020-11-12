@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
     var canRender = appSafari.generateItem(hunter);
 
     if(canRender) {
-      SHOW_ANIMATION ? animateRender(htmlRender, appSafari, hunter) : htmlRender(appSafari);
+      SHOW_ANIMATION ? animateOneItem(htmlRender, appSafari, hunter) : htmlRender(appSafari);
     }
   }
 
