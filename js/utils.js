@@ -58,3 +58,12 @@ function throwError(errText) {
   $('#errBlock').html('<i class="fa fa-exclamation-triangle"></i> ' + errText);
   $('#errBlock').fadeIn(500).delay(5000).fadeOut(500, () => {$('#errBlock').html('&nbsp;');});
 }
+
+/**
+ * XSS Security
+ */
+function htmlEncode(str){
+  return String(str).replace(/[^\w. ]/gi, function(c){
+     return '&#'+c.charCodeAt(0)+';';
+  });
+}

@@ -28,7 +28,7 @@ const PAGE_TITLE = "Rules - Phasmophobia Randomizer";
         <i class="fa fa-chevron-right"></i> <?php _e("3 players = 2 items/players", "lang") ?><br>
         <i class="fa fa-chevron-right"></i> <?php _e("4 players = 1 item/players", "lang") ?><br>
         <?php _e("A photo camera for the whole team is provided at the beginning of the game in order to validate the entity's photo objective. A lighter is available as standard to avoid making the incense and candle unusable. In multiplayer, the players will each have to have a front camera.", "lang") ?><br><br>
-        <?php _e("It is forbidden to take any objects other than those assigned or to take those of other players.", "lang") ?>
+        <span class="t-red"><?php _e("It is forbidden to take any objects other than those assigned or to take those of other players.", "lang") ?></span>
       </p>
     </section>
     <section class="table_game">
@@ -44,7 +44,7 @@ const PAGE_TITLE = "Rules - Phasmophobia Randomizer";
         <i class="fa fa-chevron-right"></i> <?php _e("1 player = 5 items", "lang") ?><br>
         <i class="fa fa-chevron-right"></i> <?php _e("2 players = 3 items/players", "lang") ?><br>
         <i class="fa fa-chevron-right"></i> <?php _e("3 players = 2 items/players", "lang") ?><br><br>
-        <?php _e("It is forbidden to take any objects other than those assigned or to take those of other players.", "lang") ?>
+        <span class="t-red"><?php _e("It is forbidden to take any objects other than those assigned or to take those of other players.", "lang") ?></span>
       </p>
       <p class="info-box">
         <i class="fa fa-info-circle"></i> <?php _e("This game mode is not suitable for 4-player multiplayer because it is impossible to have 4 photo cameras in a game at the moment.", "lang") ?>
@@ -55,7 +55,17 @@ const PAGE_TITLE = "Rules - Phasmophobia Randomizer";
     </section>
   </main>
   <?php require_once "./includes/footer.php"; ?>
-  <div class="banner"><?php echo $version; ?></div>
+  <script>
+  /**
+   * Preloading page
+   */
+  document.addEventListener("DOMContentLoaded", function preload() {
+    var $links = document.querySelectorAll("link[rel=preload]");
+    $links.forEach(link => {
+      link.rel = "stylesheet"
+    });
+  });
+  </script>
 </body>
 
 </html>

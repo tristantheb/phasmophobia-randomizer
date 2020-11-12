@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PhasmoRandomizer\n"
-"POT-Creation-Date: 2020-11-08 00:27+0100\n"
-"PO-Revision-Date: 2020-11-08 00:30+0100\n"
+"POT-Creation-Date: 2020-11-12 11:41+0100\n"
+"PO-Revision-Date: 2020-11-12 11:45+0100\n"
 "Last-Translator: tristantheb <tristantheb@gmail.com>\n"
 "Language-Team: tristantheb Production\n"
 "Language: fr_FR\n"
@@ -21,21 +21,21 @@ msgstr ""
 
 #: includes/footer.php:4
 msgid "Home page"
-msgstr ""
+msgstr "Startseite"
 
 #: includes/footer.php:5
 msgid "Rules of randomizer"
-msgstr ""
+msgstr "Regeln des Zufallsgenerators"
 
 #: includes/footer.php:6
 msgid "Report an issue"
-msgstr ""
+msgstr "Ein Problem melden"
 
 #: includes/footer.php:7
 msgid "Phasmophobia Official Discord"
-msgstr ""
+msgstr "Phasmophobia Offizielle Discord"
 
-#: includes/footer.php:12
+#: includes/footer.php:15
 msgid ""
 "All content coming from the game Phasmophobia and being used on the site "
 "belongs to Kinetic Game.<br>\n"
@@ -51,106 +51,118 @@ msgstr ""
 "Die Konzeption und Realisierung der Website und ihrer Skripte erfolgt durch "
 "tristantheb Production."
 
-#: index.php:28 rules.php:28
+#: index.php:13 rules.php:13
 msgid ""
 "Generate a game of investigation and ghost hunting in a totally random way."
 msgstr ""
 "Erzeugen Sie ein Spiel der Untersuchung und Geisterjagd auf völlig "
 "willkürliche Weise."
 
-#: index.php:33
+#: index.php:17
+msgid ""
+"Javascript is disabled on your browser. To use this site, you need to have "
+"Javascript enabled and running or active it."
+msgstr ""
+"Javascript ist in Ihrem Browser deaktiviert. Um diese Website zu benutzen, "
+"müssen Sie Javascript aktiviert haben und es ausführen oder aktivieren."
+
+#: index.php:20
 msgid "Classic game (1-4 players)"
 msgstr "Klassisches Spiel (1-4 Spieler)"
 
-#: index.php:34
+#: index.php:21
 msgid "Safari photo game (1-3 players)"
 msgstr "Safari-Fotospiel (1-3 Spieler)"
 
-#: index.php:36
+#: index.php:23
 msgid "Roll map"
 msgstr "Karte rollen"
 
-#: index.php:40
+#: index.php:24
+msgid "Enable wheel animation?"
+msgstr "Rad-Animation aktivieren?"
+
+#: index.php:28
 msgid "Classic game - Randomize the hunt"
 msgstr "Klassisches Wild - Die Jagd randomisieren"
 
-#: index.php:43 index.php:79
+#: index.php:31 index.php:67
 msgid "First hunter:"
 msgstr "Erster Jäger:"
 
-#: index.php:47 index.php:90
+#: index.php:35 index.php:78
 msgid "Second hunter:"
 msgstr "Zweiter Jäger:"
 
-#: index.php:51 index.php:101
+#: index.php:39 index.php:89
 msgid "Third hunter:"
 msgstr "Dritter Jäger:"
 
-#: index.php:55
+#: index.php:43
 msgid "Fourth hunter:"
 msgstr "Vierter Jäger:"
 
-#: index.php:59
+#: index.php:47
 msgid "Number of items to generate:"
 msgstr "Anzahl der zu generierenden Elemente:"
 
-#: index.php:61
+#: index.php:49
 msgid "Choose number of items (default 3)"
 msgstr "Anzahl der Artikel wählen (Standard 3)"
 
-#: index.php:62
+#: index.php:50
 msgid "item"
 msgstr "artikel"
 
-#: index.php:63 index.php:64 index.php:65 index.php:66
+#: index.php:51 index.php:52 index.php:53 index.php:54
 msgid "items"
 msgstr "artikel"
 
-#: index.php:69 index.php:109
+#: index.php:57 index.php:97
 msgid "Generate the game"
 msgstr "Das Spiel generieren"
 
-#: index.php:74
+#: index.php:62
 msgid "Safari photo Game - Randomize the hunt"
 msgstr "Safarifoto Wild - Die Jagd randomisieren"
 
-#: index.php:84
+#: index.php:72
 msgid "Add item to hunter one"
 msgstr "Gegenstand zu Jäger eins hinzufügen"
 
-#: index.php:95
+#: index.php:83
 msgid "Add item to hunter two"
 msgstr "Gegenstand zu Jäger zwei hinzufügen"
 
-#: index.php:106
+#: index.php:94
 msgid "Add item to hunter three"
 msgstr "Gegenstand zu Jäger drei hinzufügen"
 
-#: index.php:113
+#: index.php:101
 msgid "Results"
 msgstr "Ergebnisse"
 
-#: index.php:117 index.php:123 index.php:129 index.php:135
+#: index.php:105 index.php:111 index.php:117 index.php:123
 msgid "Hunter name"
 msgstr "Name des Jägers"
 
-#: index.php:119 index.php:125 index.php:131 index.php:137
+#: index.php:107 index.php:113 index.php:119 index.php:125
 msgid "Item list"
 msgstr "Artikel-Liste"
 
-#: rules.php:27
+#: rules.php:12
 msgid "Rules of Phasmophobia Randomizer"
-msgstr ""
+msgstr "Regeln des Phasmophobia-Randomisierers"
 
-#: rules.php:32
+#: rules.php:17
 msgid "Classic game"
 msgstr "Klassisches Spiel"
 
-#: rules.php:33 rules.php:50
+#: rules.php:18 rules.php:36
 msgid "Objectives"
-msgstr ""
+msgstr "Zielsetzungen"
 
-#: rules.php:35 rules.php:52
+#: rules.php:20 rules.php:38
 msgid ""
 "The objectives to take at least <strong> a picture of the entity</strong> "
 "and <strong> to determine its nature</strong> using the objects acquired by "
@@ -158,58 +170,86 @@ msgid ""
 "nature of the entity but <strong> must imperatively take its photo "
 "(validated in the journal)</strong> before leaving the game."
 msgstr ""
+"Die Ziele, mindestens <strong>ein Bild der Entität</strong> zu machen und "
+"<strong>ihre Natur</strong> anhand der vom Randomisierer erfassten Objekte "
+"zu bestimmen. <strong>Der/die Spieler</strong> kann/können sich über die "
+"Natur der Entität irren, aber <strong>muss unbedingt vor Verlassen des "
+"Spiels sein Foto (im Journal bestätigt)</strong> machen."
 
-#: rules.php:37 rules.php:56
-msgid "Items per players"
+#: rules.php:21
+msgid ""
+"You get a randomly chosen light source before the game starts. The team will "
+"have ONE photo camera (others need to be dropped on the randomizer), a front "
+"camera in multiplayer for each players."
 msgstr ""
+"Sie erhalten eine zufällig ausgewählte Lichtquelle, bevor das Spiel beginnt. "
+"Die Mannschaft verfügt über EINE Fotokamera (andere müssen auf den "
+"Zufallsgenerator fallen gelassen werden), eine Frontkamera im "
+"Mehrspielermodus für jeden Spieler."
 
-#: rules.php:39
+#: rules.php:23 rules.php:42
+msgid "Items per players"
+msgstr "Gegenstände pro Spieler"
+
+#: rules.php:25
 msgid ""
 "Objects are chosen randomly before the start of the game according to the "
 "number of players as follows:"
 msgstr ""
+"Die Objekte werden vor Spielbeginn nach dem Zufallsprinzip entsprechend der "
+"Anzahl der Spieler wie folgt ausgewählt:"
 
-#: rules.php:40 rules.php:58
+#: rules.php:26 rules.php:44
 msgid "1 player = 5 items"
-msgstr ""
+msgstr "1 Spieler = 5 Gegenstände"
 
-#: rules.php:41 rules.php:59
+#: rules.php:27 rules.php:45
 msgid "2 players = 3 items/players"
-msgstr ""
+msgstr "2 Spieler = 3 Gegenstände/Spieler"
 
-#: rules.php:42 rules.php:60
+#: rules.php:28 rules.php:46
 msgid "3 players = 2 items/players"
-msgstr ""
+msgstr "3 Spieler = 2 Gegenstände/Spieler"
 
-#: rules.php:43
+#: rules.php:29
 msgid "4 players = 1 item/players"
-msgstr ""
+msgstr "4 Spieler = 1 Gegenstand/Spieler"
 
-#: rules.php:44
+#: rules.php:30
 msgid ""
 "A photo camera for the whole team is provided at the beginning of the game "
 "in order to validate the entity's photo objective. A lighter is available as "
 "standard to avoid making the incense and candle unusable. In multiplayer, "
 "the players will each have to have a front camera."
 msgstr ""
+"Eine Fotokamera für die gesamte Mannschaft wird zu Beginn des Spiels zur "
+"Verfügung gestellt, um das Fotoziel der Einheit zu überprüfen. Ein Feuerzeug "
+"ist als Standard erhältlich, um den Weihrauch und die Kerze nicht "
+"unbrauchbar zu machen. Im Mehrspielermodus müssen die Spieler jeweils über "
+"eine Frontkamera verfügen."
 
-#: rules.php:45 rules.php:61
+#: rules.php:31 rules.php:47
 msgid ""
 "It is forbidden to take any objects other than those assigned or to take "
 "those of other players."
 msgstr ""
+"Es ist verboten, andere als die zugewiesenen Gegenstände oder die "
+"Gegenstände anderer Spieler mitzunehmen."
 
-#: rules.php:49
+#: rules.php:35
 msgid "Safari photo Game"
 msgstr "Safari-Foto-Spiel"
 
-#: rules.php:53
+#: rules.php:39
 msgid ""
 "You get a randomly chosen light source before the game starts. The player(s) "
 "will have a camera, a lighter and a go pro in multiplayer."
 msgstr ""
+"Sie erhalten eine zufällig ausgewählte Lichtquelle, bevor das Spiel beginnt. "
+"Der/die Spieler erhält/erhalten eine Kamera, ein Feuerzeug und einen Go-Pro "
+"im Mehrspielermodus."
 
-#: rules.php:54
+#: rules.php:40
 msgid ""
 "To unlock the right to obtain a random object, the player must succeed in "
 "taking a photo validated in the diary (interaction, ghost, dirty water, "
@@ -217,15 +257,26 @@ msgid ""
 "Each additional validated photo or secondary objective gives the player the "
 "right to obtain a new random object while respecting these restrictions:"
 msgstr ""
+"Um das Recht, ein zufälliges Objekt zu erhalten, freizuschalten, muss es dem "
+"Spieler gelingen, ein im Tagebuch validiertes Foto zu machen (Interaktion, "
+"Geist, Schmutzwasser, Druck, Knochen...) und/oder ein Nebenziel der Tafel im "
+"Lastwagen zu passieren. Jedes zusätzliche validierte Foto oder Nebenziel "
+"gibt dem Spieler das Recht, ein neues zufälliges Objekt unter Einhaltung "
+"dieser Einschränkungen zu erhalten:"
 
-#: rules.php:64
+#: rules.php:50
 msgid ""
 "This game mode is not suitable for 4-player multiplayer because it is "
 "impossible to have 4 photo cameras in a game at the moment."
 msgstr ""
+"Dieser Spielmodus eignet sich nicht für einen 4-Spieler-Mehrspieler-Modus, "
+"da es im Moment unmöglich ist, 4 Fotokameras in einem Spiel zu haben."
 
-#: rules.php:67
+#: rules.php:53
 msgid ""
 "Special cases: Solo, the player has the right to one object to be randomized "
 "before the start of the game on High School, and two objects on Asylum."
 msgstr ""
+"Besondere Fälle: Solo, der Spieler hat das Recht auf ein Objekt, das vor "
+"Spielbeginn auf der High School zufällig ausgewählt wird, und zwei Objekte "
+"auf der Asylum."

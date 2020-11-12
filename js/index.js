@@ -2,22 +2,42 @@ const appHunt = new AppHunt();
 const appSafari = new AppSafari();
 const TIMEOUT_DELAY = 5000;
 
-var SHOW_ANIMATION = true;
+if(!localStorage.getItem("SHOW_ANIMATION")) {
+  localStorage.setItem("SHOW_ANIMATION", true);
+}
+var SHOW_ANIMATION = localStorage.getItem("SHOW_ANIMATION") === "true" ? true : false;
+
+/**
+ * Preloading page
+ */
+document.addEventListener("DOMContentLoaded", function preload() {
+  var $links = document.querySelectorAll("link[rel=preload]");
+  $links.forEach(link => {
+    link.rel = "stylesheet"
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function pageLoaded() {
   /* When page is loaded, hide error block */
   $('#errBlock').hide();
   const $wheelAnim = document.querySelector("#wheelAnim");
+  $wheelAnim.checked = SHOW_ANIMATION;
   $wheelAnim.addEventListener("click", function changeCheck() {
-    SHOW_ANIMATION = this.checked ? true : false;
+    if(this.checked) {
+      SHOW_ANIMATION = true;
+      localStorage.setItem("SHOW_ANIMATION", true);
+    } else {
+      SHOW_ANIMATION = false;
+      localStorage.setItem("SHOW_ANIMATION", false);
+    }
   }, this)
 
   /**
    * Hunt mode
    */
   // Select html elements from nodes
-  const $formHunt = document.querySelector("#hunt_form");
-  const $select = document.querySelector("#items_number");
+  const $formHunt = document.querySelector("#huntForm");
+  const $select = document.querySelector("#itemsNumber");
   const $gen_map = document.querySelector("#gen_map");
 
   // Check of activity
@@ -34,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
     let form = new FormData($formHunt);
     for (const entry of form.entries()) {
       if (!!entry[1]) {
-        appHunt.setHunter(entry[1]);
+        appHunt.setHunter(htmlEncode(entry[1]));
         canRender = true;
       }
     }
@@ -61,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
     let form = new FormData($formSafari);
     for (const entry of form.entries()) {
       if (!!entry[1]) {
-        appSafari.setHunter(entry[1]);
+        appSafari.setHunter(htmlEncode(entry[1]));
       }
     }
     SHOW_ANIMATION ? animateRender(htmlRender, appSafari) : htmlRender(appSafari);

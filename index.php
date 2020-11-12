@@ -14,20 +14,20 @@ const PAGE_TITLE = "Randomizer - Phasmophobia Randomizer";
   </header>
   <main>
     <section class="table_game">
-      <noscript class="error-box">Javascript is disabled on your browser. To use this site, you need to have Javascript enabled and running or active it.</noscript>
+      <noscript class="error-box"><?php _e('Javascript is disabled on your browser. To use this site, you need to have Javascript enabled and running or active it.', 'lang') ?></noscript>
       <p id="errBlock" class="error-box">&nbsp;</p>
       <p class="row">
-        <button><label for="game_classic" class="m-0"><?php _e('Classic game (1-4 players)', 'lang') ?></label></button>
-        <button><label for="game_safari" class="m-0"><?php _e('Safari photo game (1-3 players)', 'lang') ?></label></button>
+        <button><label for="game_classic" class="m-0"><i class="fa fa-users"></i>&nbsp;<?php _e('Classic game (1-4 players)', 'lang') ?></label></button>
+        <button><label for="game_safari" class="m-0"><i class="fa fa-camera"></i>&nbsp;<?php _e('Safari photo game (1-3 players)', 'lang') ?></label></button>
       </p>
       <p class="t-center"><button id="gen_map"><i class="fa fa-dice"></i> <?php _e('Roll map', 'lang') ?></button></p>
-      <p class="t-center"><label class="check" for="wheelAnim"><?php _e('Enable wheel animation?', 'lang') ?></label><input id="wheelAnim" type="checkbox" checked></p>
+      <p class="t-center"><label class="check" for="wheelAnim"><?php _e('Enable wheel animation?', 'lang') ?></label><input id="wheelAnim" type="checkbox"></p>
     </section>
     <input type="radio" id="game_classic" name="game_style" checked>
     <section class="table_game">
       <h2><?php _e('Classic game - Randomize the hunt', 'lang') ?></h2>
-      <form id="hunt_form">
-        <label for="hunter_one">
+      <form id="huntForm">
+        <label for="hunterOne">
           <span><?php _e('First hunter:', 'lang') ?></span>
           <input id="hunterOne" name="hunterOne" type="text" autocomplete="off">
         </label>
@@ -43,9 +43,9 @@ const PAGE_TITLE = "Randomizer - Phasmophobia Randomizer";
           <span><?php _e('Fourth hunter:', 'lang') ?></span>
           <input id="hunterFour" name="hunterFour" type="text" autocomplete="off">
         </label>
-        <label for="hunterFour">
+        <label for="itemsNumber">
           <span><?php _e('Number of items to generate:', 'lang') ?></span>
-          <select id="items_number" autocomplete="off">
+          <select id="itemsNumber" autocomplete="off">
             <option><?php _e('Choose number of items (default 3)', 'lang') ?></option>
             <option value="1">1 <?php _e('item', 'lang') ?></option>
             <option value="2">2 <?php _e('items', 'lang') ?></option>
@@ -128,7 +128,6 @@ const PAGE_TITLE = "Randomizer - Phasmophobia Randomizer";
       </div>
     </section>
   </main>
-  <?php require_once "./includes/footer.php"; ?>
   <div id="animated_block">
     <h2 id="wheel_hunter">&nbsp;</h2>
     <div class="wheel_block table_game">
@@ -136,6 +135,9 @@ const PAGE_TITLE = "Randomizer - Phasmophobia Randomizer";
       <p id="animated_text" class="t-center">&nbsp;</p>
     </div>
   </div>
+  <div class="orb">&nbsp;</div>
+  <?php require_once "./includes/footer.php"; ?>
+  <!-- start:Scripts -->
   <script defer src="js/jquery.min.js?v3.5.1"></script>
   <script defer src="js/utils.min.js?v=<?php echo $version; ?>"></script>
   <script defer src="js/safari_items.js?v=<?php echo $version; ?>"></script>
@@ -145,6 +147,7 @@ const PAGE_TITLE = "Randomizer - Phasmophobia Randomizer";
   <script defer src="js/AppHunt.min.js?v=<?php echo $version; ?>"></script>
   <script defer src="js/AppSafari.min.js?v=<?php echo $version; ?>"></script>
   <script defer src="js/index.min.js?v=<?php echo $version; ?>"></script>
+  <!-- end:Scripts -->
 </body>
 
 </html>

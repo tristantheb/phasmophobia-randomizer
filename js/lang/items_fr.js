@@ -14,7 +14,7 @@ const items = [
   ["parabolic_microphone", 2, "Microphone parabolique"],
   ["photo_camera", 2, "Appareil photo"],
   ["salt", 2, "Sel"],
-  ["smudge_sticks", 4, "Bâton d'encens"],
+  ["smudge_sticks", 4, "Bâtons d'encens"],
   ["sound_sensor", 4, "Capteur sonore"],
   ["spirit_box", 2, "Spirit Box"],
   ["termometer", 3, "Thermomètre"],

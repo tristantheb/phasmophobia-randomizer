@@ -19,5 +19,10 @@
   <title><?php echo PAGE_TITLE; ?></title>
   <link rel="canonical" href="https://www.phasmo-randomizer.site">
   <link rel="stylesheet" href="./css/style.min.css?v=<?php echo $version; ?>">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="preload" href="./css/assets.min.css?v=<?php echo $version; ?>">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <noscript>
+    <link rel="stylesheet" href="./css/assets.min.css?v=<?php echo $version; ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </noscript>
 </head>
