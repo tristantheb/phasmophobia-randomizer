@@ -10,6 +10,44 @@ header::after {
   width: 40%;
 }
 
+table {
+  border-collapse: collapse;
+  border: 0;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+#evidences tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, .4);
+}
+
+td {
+  font-size: .8em;
+  text-align: center;
+}
+
+td>label {
+  font-size: .8em;
+  display: inline;
+}
+
+.checkEvid {
+  margin: 0 4em;
+}
+
+#evidences tr.row-active {
+  background-color: var(--green);
+}
+
+#evidences tr.row-negative {
+  background-color: var(--orange);
+}
+
+#evidences tr.row-disabled {
+  background-color: var(--red);
+}
+
 /** Orb element */
 .orb {
   display: inline;
@@ -109,5 +147,6 @@ header::after {
 @font-face {
   font-family: OctoberCrow;
   font-style: normal;
+  font-weight: 700;
   src: url("../fonts/october_crow.ttf");
 }

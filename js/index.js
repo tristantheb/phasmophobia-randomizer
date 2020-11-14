@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
     appHunt.setMaxItems($select[val].value);
   });
 
+  // Submit form for Hunt mode
   $formHunt.addEventListener("submit", function submitForm(event) {
     event.preventDefault();
     let canRender = false;
@@ -70,20 +71,40 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
   const $formSafari = document.querySelector("#safari_form");
   const $submits = document.querySelectorAll("input[data-itemAdd]");
 
+  // Add item to the hunter and enable the animation
   $submits.forEach(submit => {
     submit.addEventListener('click', () => {addItemAndWheel(submit)});
   });
 
+  // Submit form for Safari mode
   $formSafari.addEventListener("submit", function submitForm(event) {
     event.preventDefault();
     appHunt.reset();
     appSafari.reset();
-    let form = new FormData($formSafari);
-    for (const entry of form.entries()) {
-      if (!!entry[1]) {
-        appSafari.setHunter(htmlEncode(entry[1]));
+    let form = new FormData($formSafari), entries = form.entries(), entriesArray = [];
+    for (const entry of entries) {
+      if (entry[1] !== "") {
+        entriesArray.push(entry[1]);
       }
     }
+    let randInt = getRandomInt(entriesArray.length);
+    entriesArray.forEach((entry, key) => {
+      if (!!entry) {
+        if (entriesArray.length < 4) {
+          // 1-3 players mode
+          appSafari.setHunter(htmlEncode(entry));
+        } else if (entriesArray.length === 4) {
+          // 4 players mode
+          if (key === randInt) {
+            appSafari.setHunterLight(htmlEncode(entry));
+          } else {
+            appSafari.setHunterPhoto(htmlEncode(entry));
+          }
+        } else {
+          throwError("Number of player is not possible !");
+        }
+      }
+    });
     SHOW_ANIMATION ? animateRender(htmlRender, appSafari) : htmlRender(appSafari);
   });
 
@@ -96,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
     var canRender = appSafari.generateItem(hunter);
 
     if(canRender) {
-      SHOW_ANIMATION ? animateOneItem(htmlRender, appSafari, hunter) : htmlRender(appSafari);
+      SHOW_ANIMATION ? animateRender(htmlRender, appSafari, hunter) : htmlRender(appSafari);
     }
   }
 
@@ -136,6 +157,12 @@ function htmlRender(app) {
       li += "<li><img src=\"./img/" + list[0] + ".png\" alt=\"" + item + "\"> " + item + "</li>";
     });
     $hunterList.innerHTML += "<ul class=\"items-list\">" + li + "</ul>";
+  }
+
+  for (let i = hunters.length; i < 4; i++) {
+    let hunt = i + 1
+    const $hunterList = document.querySelector("#hunter-" + hunt);
+    $hunterList.innerHTML = "";
   }
 }
 

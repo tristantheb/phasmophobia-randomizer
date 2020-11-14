@@ -3,7 +3,7 @@ require_once "includes/config.php";
 const PAGE_TITLE = "Rules - Phasmophobia Randomizer";
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $lang; ?>">
 
 <?php require_once "includes/head.php"; ?>
 
@@ -47,7 +47,7 @@ const PAGE_TITLE = "Rules - Phasmophobia Randomizer";
         <span class="t-red"><?php _e("It is forbidden to take any objects other than those assigned or to take those of other players.", "lang") ?></span>
       </p>
       <p class="info-box">
-        <i class="fa fa-info-circle"></i> <?php _e("This game mode is not suitable for 4-player multiplayer because it is impossible to have 4 photo cameras in a game at the moment.", "lang") ?>
+        <i class="fa fa-info-circle"></i> <?php _e("In 4-player mode, only one player has the light, the others have a camera. The player with the light is only the Beaconator, he can only give you light in buildings.", "lang") ?>
       </p>
       <p class="info-box">       
       <i class="fa fa-info-circle"></i> <?php _e("Special cases: Solo, the player has the right to one object to be randomized before the start of the game on High School, and two objects on Asylum.", "lang") ?>

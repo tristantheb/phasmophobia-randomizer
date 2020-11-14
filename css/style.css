@@ -9,8 +9,9 @@
   --dark-gray: #2D2E35;
   --gray: #383c48;
   --light-gray: #ababbe;
-  --green: #494;
-  --red: #c44;
+  --green: #4a5;
+  --orange: #c83;
+  --red: #d44;
   --blue: #29b;
   --white: #fff;
 }
@@ -86,6 +87,7 @@ strong {
 
 .menu ul {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -96,6 +98,7 @@ strong {
 .menu-item a {
   background-color: transparent;
   cursor: pointer;
+  display: inline-block;
   font-size: 1.2em;
   padding: 10px 25px;
   text-decoration: none;
@@ -298,13 +301,6 @@ label,
   display: none;
 }
 
-.error-box {
-  background-color: var(--red);
-  border-radius: 3px;
-  color: var(--white);
-  padding: 12px;
-}
-
 .t-center {
   text-align: center;
 }
@@ -331,6 +327,10 @@ label,
 
   #hunt_form {
     width: 75%;
+  }
+
+  .menu ul {
+    flex-direction: row;
   }
 
   .table_game {

@@ -17,8 +17,8 @@ const PAGE_TITLE = "Randomizer - Phasmophobia Randomizer";
       <noscript class="error-box"><?php _e('Javascript is disabled on your browser. To use this site, you need to have Javascript enabled and running or active it.', 'lang') ?></noscript>
       <p id="errBlock" class="error-box">&nbsp;</p>
       <p class="row">
-        <button><label for="game_classic" class="m-0"><i class="fa fa-users"></i>&nbsp;<?php _e('Classic game (1-4 players)', 'lang') ?></label></button>
-        <button><label for="game_safari" class="m-0"><i class="fa fa-camera"></i>&nbsp;<?php _e('Safari photo game (1-3 players)', 'lang') ?></label></button>
+        <button><label for="game_classic" class="m-0"><i class="fa fa-users"></i>&nbsp;<?php _e('Classic game', 'lang') ?></label></button>
+        <button><label for="game_safari" class="m-0"><i class="fa fa-camera"></i>&nbsp;<?php _e('Safari photo game', 'lang') ?></label></button>
       </p>
       <p class="t-center"><button id="gen_map"><i class="fa fa-dice"></i> <?php _e('Roll map', 'lang') ?></button></p>
       <p class="t-center"><label class="check" for="wheelAnim"><?php _e('Enable wheel animation?', 'lang') ?></label><input id="wheelAnim" type="checkbox"></p>
@@ -92,6 +92,17 @@ const PAGE_TITLE = "Randomizer - Phasmophobia Randomizer";
           </div>
           <div class="col-4">
             <p class="t-center mt-0"><input type="button" data-itemAdd="3" value="<?php _e('Add item to hunter three', 'lang') ?>"></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <label for="safariFourth">
+              <span><?php _e('Fourth hunter:', 'lang') ?></span>
+              <input id="safariFourth" name="safariFourth" type="text" autocomplete="off">
+            </label>
+          </div>
+          <div class="col-4">
+            <p class="t-center mt-0"><input type="button" data-itemAdd="4" value="<?php _e('Add item to hunter fourth', 'lang') ?>"></p>
           </div>
         </div>
         <input type="submit" value="<?php _e('Generate the game', 'lang') ?>">

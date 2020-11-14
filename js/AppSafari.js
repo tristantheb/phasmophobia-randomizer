@@ -33,6 +33,38 @@ function AppSafari() {
 
   /**
    * Generate a new hunter
+   * @param {string} name The name of the player
+   * 
+   * @returns {undefined}
+   * @public
+   */
+  this.setHunterLight = function setHunterLight(name) {
+    var hunter = new Hunter();
+    hunter.setName(name);
+    let u = null;
+    while (u === null) {
+      u = getRandomInt(safariLights.length);
+    }
+    hunter.setItem(safariLights[u]);
+    hunters.push(hunter);
+  }
+
+  /**
+   * Generate a new hunter
+   * @param {string} name The name of the player
+   * 
+   * @returns {undefined}
+   * @public
+   */
+  this.setHunterPhoto = function setHunterPhoto(name) {
+    var hunter = new Hunter();
+    hunter.setName(name);
+    hunter.setItem(safariItems[7]);
+    hunters.push(hunter);
+  }
+
+  /**
+   * Generate a new hunter
    * @returns {object}
    * @public
    */
