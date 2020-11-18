@@ -3,13 +3,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const $selectorsNo = document.querySelectorAll('.hasnt_evid');
   const $rows = document.querySelectorAll(".evid_row");
   const $clearAll = document.querySelector("#btnClear");
+  const $ghostNames = document.querySelectorAll('.evid_row th');
   resetAll();
 
   $selectorsYes.forEach(selector => {
-    selector.addEventListener('click', updateEvidenceTracker);
+    selector.addEventListener('change', updateTable);
   });
   $selectorsNo.forEach(selector => {
-    selector.addEventListener('click', updateUnevidenceTracker);
+    selector.addEventListener('change', updateTable);
+  });
+  
+  $ghostNames.forEach(row => {
+    row.addEventListener('click', () => {ghostInfo(row);});
   });
 
   $clearAll.addEventListener('click', resetAll);
@@ -36,13 +41,17 @@ document.addEventListener("DOMContentLoaded", function () {
     return checkedUnevidences;
   }
 
+  function updateTable() {
+    resetRows();
+    updateEvidenceTracker();
+    updateUnevidenceTracker();
+  }
+
   /**
    * 
-   * @param {boolean=true} r Represent the activation for the reset mode
+   * @param {boolean=true} reset Represent the activation for the reset mode
    */
-  function updateEvidenceTracker(r = true) {
-    // Reset
-    if (r) resetRows();
+  function updateEvidenceTracker() {
     // Init
     const evidencesObject = ghostEvidences();
     const evidencesArray = Object.entries(evidencesObject);
@@ -67,18 +76,13 @@ document.addEventListener("DOMContentLoaded", function () {
         $cell.classList.add('row-negative');
       }
     }
-    if (r) {
-      updateUnevidenceTracker(false);
-    }
   }
 
   /**
    * 
-   * @param {boolean=true} r Represent the activation for the reset mode
+   * @param {boolean=true} reset Represent the activation for the reset mode
    */
-  function updateUnevidenceTracker(r = true) {
-    // Reset
-    if (r) resetRows();
+  function updateUnevidenceTracker() {
     // Init
     const evidencesObject = ghostEvidences();
     const evidencesArray = Object.entries(evidencesObject);
@@ -95,9 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
-    if (r) {
-      updateEvidenceTracker(false);
-    }
   }
 
   function resetAll() {
@@ -113,6 +114,20 @@ document.addEventListener("DOMContentLoaded", function () {
   function resetRows() {
     $rows.forEach(row => {
       row.classList.remove('row-active', 'row-disabled', 'row-negative');
+    });
+  }
+
+  function ghostInfo(htmlElement) {
+    let id = htmlElement.parentElement;
+    id = id.getAttribute('id'), ghostList = ghostPowers();
+    ghostList = Object.entries(ghostList);
+    ghostList.forEach(ghost => {
+      if (ghost[0] === id) {
+        let $ghostInfo = document.querySelector("#ghostInfo");
+        $ghostInfo.innerHTML = '<h4><i class="fa fa-ghost"></i> ' + ghost[1].name + '</h4>';
+        $ghostInfo.innerHTML += '<p><i class="fa fa-plus-circle"></i> ' + ghost[1].power + '</p>';
+        $ghostInfo.innerHTML += '<p><i class="fa fa-minus-circle"></i> ' + ghost[1].weakness + '</p>';
+      }
     });
   }
 });

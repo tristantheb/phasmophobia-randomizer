@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
     var canRender = appSafari.generateItem(hunter);
 
     if(canRender) {
-      SHOW_ANIMATION ? animateRender(htmlRender, appSafari, hunter) : htmlRender(appSafari);
+      SHOW_ANIMATION ? animateOneItem(htmlRender, appSafari, hunter) : htmlRender(appSafari);
     }
   }
 
@@ -141,21 +141,27 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
 
 /**
  * Update the result view
- * @param {Objetc} app The app object
+ * @param {object} app The app object
  */
 function htmlRender(app) {
   var hunters = app.getHunters();
   for (let i = 0; i < hunters.length; i++) {
+    // Get elements
     const hunter = hunters[i].getAsObject();
-    let hunt = i + 1
+    let hunt = i + 1;
     const $hunterList = document.querySelector("#hunter-" + hunt);
+
+    // Set Hunter name on the HTML
     $hunterList.innerHTML = "<p class=\"hunter_name t-center\">" + hunter.username + "</p>";
+
+    // Get list an set on HTML element
     let li = "";
     hunter.itemList.forEach(list => {
       let item = checkOnDualList(list[0], items);
       item = !item ? checkOnDualList(list[0], itemsLights) : item;
       li += "<li><img src=\"./img/" + list[0] + ".png\" alt=\"" + item + "\"> " + item + "</li>";
     });
+    // Push list on HTML
     $hunterList.innerHTML += "<ul class=\"items-list\">" + li + "</ul>";
   }
 
@@ -168,7 +174,7 @@ function htmlRender(app) {
 
 /**
  * Animate the render of item picker
- * @param {object} callback A callback function name
+ * @param {string} callback A callback function name
  * @param {object} app The actual app used
  */
 function animateRender(callback, app) {
@@ -205,7 +211,7 @@ function animateRender(callback, app) {
 
 /**
  * Animate the render of item picker
- * @param {object} callback A callback function name
+ * @param {string} callback A callback function name
  * @param {object} hunter The targeted hunter
  */
 function animateOneItem(callback, app, hunter) {

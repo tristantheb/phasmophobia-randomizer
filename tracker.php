@@ -1,6 +1,13 @@
 <?php
 require_once "includes/config.php";
 const PAGE_TITLE = "Tracker - Phasmophobia Randomizer";
+const PAGE_DESCRIPTION = "Do you want to eliminate ghosts with the clues you don't have, and the ones you do have? This ghost tracker is here to help you in your investigation!";
+
+// JS file check
+$fileGhosts = "js/lang/ghosts_$lang.js";
+if (!file_exists($fileGhosts)) {
+  $fileGhosts = "js/lang/ghosts_en.js";
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $lang; ?>">
@@ -14,40 +21,45 @@ const PAGE_TITLE = "Tracker - Phasmophobia Randomizer";
   </header>
   <main>
     <section class="table_game">
-      <table>
-        <tr>
-          <th scope="row"><?php _e("Evidences", "lang") ?></th>
-          <td><label for="evidEmf"><img src="./img/emf_5.png" alt="<?php _e("Emf 5", "lang") ?>"></label></td>
-          <td><label for="evidFinger"><img src="./img/fingerprint.png" alt="<?php _e("Fingerprints", "lang") ?>"></label></td>
-          <td><label for="evidFeeze"><img src="./img/freezing_temp.png" alt="<?php _e("Freezing Temperature", "lang") ?>"></label></td>
-          <td><label for="evidOrb"><img src="./img/orbs.png" alt="<?php _e("Ghost Orbs", "lang") ?>"></label></td>
-          <td><label for="evidWriting"><img src="./img/ghost_writing.png" alt="<?php _e("Ghost Writing", "lang") ?>"></label></td>
-          <td><label for="evidSpirit"><img src="./img/spirit_talk.png" alt="<?php _e("Spirit Box", "lang") ?>"></label></td>
-        </tr>
-        <tr>
-          <th scope="row"><?php _e("Yes", "lang") ?></th>
-          <td><input data-evidCheck="emf" id="evidEmf" type="checkbox" class="checkEvid has_evid"></td>
-          <td><input data-evidCheck="fingerprints" id="evidFinger" type="checkbox" class="checkEvid has_evid"></td>
-          <td><input data-evidCheck="freezing-temp" id="evidFeeze" type="checkbox" class="checkEvid has_evid"></td>
-          <td><input data-evidCheck="ghost-orbs" id="evidOrb" type="checkbox" class="checkEvid has_evid"></td>
-          <td><input data-evidCheck="ghost-writing" id="evidWriting" type="checkbox" class="checkEvid has_evid"></td>
-          <td><input data-evidCheck="spirit-box" id="evidSpirit" type="checkbox" class="checkEvid has_evid"></td>
-        </tr>
-        <tr>
-          <th scope="row"><?php _e("No", "lang") ?></th>
-          <td><input data-evidCheck="emf" id="evidEmf" type="checkbox" class="checkEvid hasnt_evid"></td>
-          <td><input data-evidCheck="fingerprints" id="evidFinger" type="checkbox" class="checkEvid hasnt_evid"></td>
-          <td><input data-evidCheck="freezing-temp" id="evidFeeze" type="checkbox" class="checkEvid hasnt_evid"></td>
-          <td><input data-evidCheck="ghost-orbs" id="evidOrb" type="checkbox" class="checkEvid hasnt_evid"></td>
-          <td><input data-evidCheck="ghost-writing" id="evidWriting" type="checkbox" class="checkEvid hasnt_evid"></td>
-          <td><input data-evidCheck="spirit-box" id="evidSpirit" type="checkbox" class="checkEvid hasnt_evid"></td>
-        </tr>
-        <tr>
-          <td colspan="7">
-            <button id="btnClear"><?php _e("Clear All", "lang") ?></button>
-          </td>
-        </tr>
-      </table>
+      <div class="row">
+        <table class="col-2">
+          <tr>
+            <th scope="row"><?php _e("Evidences", "lang") ?></th>
+            <td><label for="evidEmf"><img src="./img/emf_5.png" alt="<?php _e("Emf 5", "lang") ?>"></label></td>
+            <td><label for="evidFinger"><img src="./img/fingerprint.png" alt="<?php _e("Fingerprints", "lang") ?>"></label></td>
+            <td><label for="evidFeeze"><img src="./img/freezing_temp.png" alt="<?php _e("Freezing Temperature", "lang") ?>"></label></td>
+            <td><label for="evidOrb"><img src="./img/orbs.png" alt="<?php _e("Ghost Orbs", "lang") ?>"></label></td>
+            <td><label for="evidWriting"><img src="./img/ghost_writing.png" alt="<?php _e("Ghost Writing", "lang") ?>"></label></td>
+            <td><label for="evidSpirit"><img src="./img/spirit_talk.png" alt="<?php _e("Spirit Box", "lang") ?>"></label></td>
+          </tr>
+          <tr>
+            <th scope="row"><?php _e("Yes", "lang") ?></th>
+            <td><input data-evidCheck="emf" id="evidEmf" type="checkbox" class="checkEvid has_evid"></td>
+            <td><input data-evidCheck="fingerprints" id="evidFinger" type="checkbox" class="checkEvid has_evid"></td>
+            <td><input data-evidCheck="freezing-temp" id="evidFeeze" type="checkbox" class="checkEvid has_evid"></td>
+            <td><input data-evidCheck="ghost-orbs" id="evidOrb" type="checkbox" class="checkEvid has_evid"></td>
+            <td><input data-evidCheck="ghost-writing" id="evidWriting" type="checkbox" class="checkEvid has_evid"></td>
+            <td><input data-evidCheck="spirit-box" id="evidSpirit" type="checkbox" class="checkEvid has_evid"></td>
+          </tr>
+          <tr>
+            <th scope="row"><?php _e("No", "lang") ?></th>
+            <td><input data-evidCheck="emf" id="evidEmfNo" type="checkbox" class="checkEvid hasnt_evid"></td>
+            <td><input data-evidCheck="fingerprints" id="evidFingerNo" type="checkbox" class="checkEvid hasnt_evid"></td>
+            <td><input data-evidCheck="freezing-temp" id="evidFeezeNo" type="checkbox" class="checkEvid hasnt_evid"></td>
+            <td><input data-evidCheck="ghost-orbs" id="evidOrbNo" type="checkbox" class="checkEvid hasnt_evid"></td>
+            <td><input data-evidCheck="ghost-writing" id="evidWritingNo" type="checkbox" class="checkEvid hasnt_evid"></td>
+            <td><input data-evidCheck="spirit-box" id="evidSpiritNo" type="checkbox" class="checkEvid hasnt_evid"></td>
+          </tr>
+          <tr>
+            <td colspan="7">
+              <button id="btnClear"><?php _e("Clear All", "lang") ?></button>
+            </td>
+          </tr>
+        </table>
+        <div id="ghostInfo" class="col-2">
+          <p class="t-center"><?php _e('Click on one ghost line to get information', 'lang'); ?></p>
+        </div>
+      </div>
     </section>
     <section class="table_game">
       <table id="evidences">
@@ -175,6 +187,10 @@ const PAGE_TITLE = "Tracker - Phasmophobia Randomizer";
   });
   </script>
   <script defer src="js/indexTrack.min.js?v=<?php echo $version; ?>"></script>
+<<<<<<< HEAD
+=======
+  <script defer src="<?php echo $fileGhosts; ?>?v=<?php echo $version; ?>"></script>
+>>>>>>> dev
 </body>
 
 </html>

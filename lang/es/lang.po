@@ -1,8 +1,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PhasmoRandomizer\n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2020-11-14 11:16+0100\n"
 "PO-Revision-Date: 2020-11-14 11:16+0100\n"
+=======
+"POT-Creation-Date: 2020-11-14 12:07+0100\n"
+"PO-Revision-Date: 2020-11-14 12:07+0100\n"
+>>>>>>> dev
 "Last-Translator: tristantheb <tristantheb@gmail.com>\n"
 "Language-Team: tristantheb Production\n"
 "Language: es_ES\n"
@@ -29,7 +34,11 @@ msgstr "Reglas del aleatorizador"
 
 #: includes/footer.php:6
 msgid "Ghost (Un)Tracker"
+<<<<<<< HEAD
 msgstr ""
+=======
+msgstr "(Des)rastreador de fantasmas"
+>>>>>>> dev
 
 #: includes/footer.php:7
 msgid "Report an issue"
@@ -38,11 +47,19 @@ msgstr "Informar de un problema"
 #: includes/footer.php:8
 msgid "Phasmophobia Official Discord"
 msgstr "Phasmophobia Discord oficial"
+<<<<<<< HEAD
 
 #: includes/footer.php:9
 msgid "Open in external window"
 msgstr ""
 
+=======
+
+#: includes/footer.php:9
+msgid "Open in external window"
+msgstr "Abrir en la ventana externa"
+
+>>>>>>> dev
 #: includes/footer.php:17
 msgid ""
 "All content coming from the game Phasmophobia and being used on the site "
@@ -59,19 +76,28 @@ msgstr ""
 "La concepción y la realización del sitio y sus guiones son realizados por "
 "tristantheb Production."
 
+<<<<<<< HEAD
 #: index.php:13 rules.php:13
+=======
+#: index.php:14 rules.php:14
+>>>>>>> dev
 msgid ""
 "Generate a game of investigation and ghost hunting in a totally random way."
 msgstr ""
 "Generar un juego de investigación y caza de fantasmas totalmente al azar."
 
+<<<<<<< HEAD
 #: index.php:17
+=======
+#: index.php:18
+>>>>>>> dev
 msgid ""
 "Javascript is disabled on your browser. To use this site, you need to have "
 "Javascript enabled and running or active it."
 msgstr ""
 "Javascript está deshabilitado en su navegador. Para usar este sitio, "
 "necesita tener Javascript habilitado y ejecutarlo o activarlo."
+<<<<<<< HEAD
 
 #: index.php:20 rules.php:17
 msgid "Classic game"
@@ -150,6 +176,86 @@ msgid "Add item to hunter fourth"
 msgstr "Añadir el artículo al cazador quatro"
 
 #: index.php:112
+=======
+
+#: index.php:21 rules.php:18
+msgid "Classic game"
+msgstr "Juego clásico"
+
+#: index.php:22
+msgid "Safari photo game"
+msgstr "Juego de fotos Safari"
+
+#: index.php:24
+msgid "Roll map"
+msgstr "Tira una carta"
+
+#: index.php:25
+msgid "Enable wheel animation?"
+msgstr "¿Permitir la animación de la rueda?"
+
+#: index.php:29
+msgid "Classic game - Randomize the hunt"
+msgstr "Juego clásico - Aleatorizar la cacería"
+
+#: index.php:32 index.php:68
+msgid "First hunter:"
+msgstr "Primer cazador:"
+
+#: index.php:36 index.php:79
+msgid "Second hunter:"
+msgstr "Segundo cazador:"
+
+#: index.php:40 index.php:90
+msgid "Third hunter:"
+msgstr "Tercer cazador:"
+
+#: index.php:44 index.php:101
+msgid "Fourth hunter:"
+msgstr "Cuarto cazador:"
+
+#: index.php:48
+msgid "Number of items to generate:"
+msgstr "Número de elementos a generar:"
+
+#: index.php:50
+msgid "Choose number of items (default 3)"
+msgstr "Elija un número de objetos (3 por defecto)"
+
+#: index.php:51
+msgid "item"
+msgstr "objeto"
+
+#: index.php:52 index.php:53 index.php:54 index.php:55
+msgid "items"
+msgstr "objetos"
+
+#: index.php:58 index.php:109
+msgid "Generate the game"
+msgstr "Generar el juego"
+
+#: index.php:63
+msgid "Safari photo Game - Randomize the hunt"
+msgstr "Juego de fotos Safari - Aleatorizar la cacería"
+
+#: index.php:73
+msgid "Add item to hunter one"
+msgstr "Añadir el artículo al cazador uno"
+
+#: index.php:84
+msgid "Add item to hunter two"
+msgstr "Añadir el artículo al cazador dos"
+
+#: index.php:95
+msgid "Add item to hunter three"
+msgstr "Añadir el artículo al cazador tres"
+
+#: index.php:106
+msgid "Add item to hunter fourth"
+msgstr "Añadir el artículo al cazador quatro"
+
+#: index.php:113
+>>>>>>> dev
 msgid "Results"
 msgstr "Resultados"
 
@@ -161,6 +267,7 @@ msgstr "Nombre del cazador"
 msgid "Item list"
 msgstr "Lista de objetos"
 
+<<<<<<< HEAD
 #: rules.php:12
 msgid "Rules of Phasmophobia Randomizer"
 msgstr "Reglas de la Phasmophobia Aleatoria"
@@ -170,13 +277,37 @@ msgid "Objectives"
 msgstr "Objetivos"
 
 #: rules.php:20 rules.php:38
+=======
+#: rules.php:13
+msgid "Rules of Phasmophobia Randomizer"
+msgstr "Reglas de la Phasmophobia Aleatoria"
+
+#: rules.php:19 rules.php:37
+msgid "Objectives"
+msgstr "Objetivos"
+
+#: rules.php:21 rules.php:39
 msgid ""
-"The objectives to take at least <strong> a picture of the entity</strong> "
-"and <strong> to determine its nature</strong> using the objects acquired by "
-"the randomizer. <strong>The player(s)</strong> can be mistaken about the "
-"nature of the entity but <strong> must imperatively take its photo "
-"(validated in the journal)</strong> before leaving the game."
+"The objectives to take at least <strong>a picture of the entity</strong> and "
+"<strong>to determine its nature</strong> using the objects acquired by the "
+"randomizer. <strong>The player(s)</strong> can be mistaken about the nature "
+"of the entity but <strong>must imperatively take its photo (validated in the "
+"journal)</strong> before leaving the game."
 msgstr ""
+"Los objetivos de tomar al menos <strong>una foto de la entidad</strong> y "
+"<strong>para determinar su naturaleza</strong> utilizando los objetos "
+"adquiridos por el aleatorizador. <strong>El jugador(es)</strong> puede "
+"equivocarse sobre la naturaleza del ente pero <strong>debe imperativamente "
+"tomar su foto (validada en el diario)</strong> antes de dejar el juego."
+
+#: rules.php:22
+>>>>>>> dev
+msgid ""
+"You get a randomly chosen light source before the game starts. The team will "
+"have ONE photo camera (others need to be dropped on the randomizer), a front "
+"camera in multiplayer for each players."
+msgstr ""
+<<<<<<< HEAD
 "Los objetivos de tomar al menos <strong>una foto de la entidad</strong> y "
 "<strong>para determinar su naturaleza</strong> utilizando los objetos "
 "adquiridos por el aleatorizador. <strong>El jugador(es)</strong> puede "
@@ -198,6 +329,17 @@ msgid "Items per players"
 msgstr "Objectos por jugador"
 
 #: rules.php:25
+=======
+"Tienes una fuente de luz elegida al azar antes de que empiece el juego. El "
+"equipo tendrá UNA cámara de fotos (las demás deberán ser dejadas en el "
+"aleatorizador), una cámara frontal en el multijugador para cada jugador."
+
+#: rules.php:24 rules.php:43
+msgid "Items per players"
+msgstr "Objectos por jugador"
+
+#: rules.php:26
+>>>>>>> dev
 msgid ""
 "Objects are chosen randomly before the start of the game according to the "
 "number of players as follows:"
@@ -205,6 +347,7 @@ msgstr ""
 "Los objetos se eligen al azar antes del comienzo del juego según el número "
 "de jugadores de la siguiente manera:"
 
+<<<<<<< HEAD
 #: rules.php:26 rules.php:44
 msgid "1 player = 5 items"
 msgstr "1 jugador = 5 objetos"
@@ -222,6 +365,25 @@ msgid "4 players = 1 item/players"
 msgstr "4 jugadores = 1 objeto/jugador"
 
 #: rules.php:30
+=======
+#: rules.php:27 rules.php:45
+msgid "1 player = 5 items"
+msgstr "1 jugador = 5 objetos"
+
+#: rules.php:28 rules.php:46
+msgid "2 players = 3 items/players"
+msgstr "2 jugadores = 3 objetos/jugadores"
+
+#: rules.php:29 rules.php:47
+msgid "3 players = 2 items/players"
+msgstr "3 jugadores = 2 objetos/jugadores"
+
+#: rules.php:30
+msgid "4 players = 1 item/players"
+msgstr "4 jugadores = 1 objeto/jugador"
+
+#: rules.php:31
+>>>>>>> dev
 msgid ""
 "A photo camera for the whole team is provided at the beginning of the game "
 "in order to validate the entity's photo objective. A lighter is available as "
@@ -234,7 +396,11 @@ msgstr ""
 "inutilizados. En el multijugador, cada jugador tendrá que tener una cámara "
 "frontal."
 
+<<<<<<< HEAD
 #: rules.php:31 rules.php:47
+=======
+#: rules.php:32 rules.php:48
+>>>>>>> dev
 msgid ""
 "It is forbidden to take any objects other than those assigned or to take "
 "those of other players."
@@ -242,11 +408,19 @@ msgstr ""
 "Está prohibido tomar cualquier objeto que no sea el asignado o tomar los de "
 "otros jugadores."
 
+<<<<<<< HEAD
 #: rules.php:35
 msgid "Safari photo Game"
 msgstr "Juego de fotos Safari"
 
 #: rules.php:39
+=======
+#: rules.php:36
+msgid "Safari photo Game"
+msgstr "Juego de fotos Safari"
+
+#: rules.php:40
+>>>>>>> dev
 msgid ""
 "You get a randomly chosen light source before the game starts. The player(s) "
 "will have a camera, a lighter and a go pro in multiplayer."
@@ -255,7 +429,11 @@ msgstr ""
 "Los jugadores tendrán una cámara, un encendedor y un go pro en el "
 "multijugador."
 
+<<<<<<< HEAD
 #: rules.php:40
+=======
+#: rules.php:41
+>>>>>>> dev
 msgid ""
 "To unlock the right to obtain a random object, the player must succeed in "
 "taking a photo validated in the diary (interaction, ghost, dirty water, "
@@ -270,14 +448,25 @@ msgstr ""
 "jugador el derecho de obtener un nuevo objeto aleatorio respetando estas "
 "restricciones:"
 
+<<<<<<< HEAD
 #: rules.php:50
+=======
+#: rules.php:51
+>>>>>>> dev
 msgid ""
 "In 4-player mode, only one player has the light, the others have a camera. "
 "The player with the light is only the Beaconator, he can only give you light "
 "in buildings."
 msgstr ""
+"En el modo de 4 jugadores, sólo un jugador tiene la luz, los otros tienen "
+"una cámara. El jugador con la luz es sólo el Faro, sólo puede dar luz en los "
+"edificios."
 
+<<<<<<< HEAD
 #: rules.php:53
+=======
+#: rules.php:54
+>>>>>>> dev
 msgid ""
 "Special cases: Solo, the player has the right to one object to be randomized "
 "before the start of the game on High School, and two objects on Asylum."
@@ -286,6 +475,7 @@ msgstr ""
 "aleatorio antes del comienzo del juego en High School, y dos objetos en "
 "Asylum."
 
+<<<<<<< HEAD
 #: tracker.php:12
 msgid "Tracker of Phasmophobia"
 msgstr "Tracker de la Phasmophobia Aleatoria"
@@ -400,3 +590,106 @@ msgstr ""
 #~ msgstr ""
 #~ "Este modo de juego no es adecuado para el multijugador de 4 jugadores "
 #~ "porque es imposible tener 4 cámaras de fotos en un juego en este momento."
+=======
+#: tracker.php:13
+msgid "Tracker of Phasmophobia"
+msgstr "Rastreador de Phasmophobia"
+
+#: tracker.php:14
+msgid "Find the ghost with the founded or rejected evidences."
+msgstr "Encuentra al fantasma con las evidencias fundadas o rechazadas."
+
+#: tracker.php:20
+msgid "Evidences"
+msgstr "Evidencias"
+
+#: tracker.php:21 tracker.php:75 tracker.php:93 tracker.php:102 tracker.php:120
+#: tracker.php:129 tracker.php:156
+msgid "Emf 5"
+msgstr "Emf 5"
+
+#: tracker.php:22 tracker.php:58 tracker.php:67 tracker.php:85 tracker.php:94
+#: tracker.php:121
+msgid "Fingerprints"
+msgstr "Huellas dactilares"
+
+#: tracker.php:23 tracker.php:68 tracker.php:77 tracker.php:95 tracker.php:113
+#: tracker.php:140 tracker.php:149
+msgid "Freezing Temperature"
+msgstr "Temperatura de congelación"
+
+#: tracker.php:24 tracker.php:78 tracker.php:87 tracker.php:105 tracker.php:114
+#: tracker.php:132 tracker.php:150
+msgid "Ghost Orbs"
+msgstr "Orbes Fantasmas"
+
+#: tracker.php:25 tracker.php:61 tracker.php:124 tracker.php:133
+#: tracker.php:142 tracker.php:151 tracker.php:160
+msgid "Ghost Writing"
+msgstr "Escritura Fantasma"
+
+#: tracker.php:26 tracker.php:62 tracker.php:71 tracker.php:89 tracker.php:107
+#: tracker.php:116 tracker.php:143 tracker.php:161
+msgid "Spirit Box"
+msgstr "Caja de espíritus"
+
+#: tracker.php:29
+msgid "Yes"
+msgstr "Sí"
+
+#: tracker.php:38
+msgid "No"
+msgstr "No"
+
+#: tracker.php:48
+msgid "Clear All"
+msgstr "Despejen todo"
+
+#: tracker.php:56
+msgid "Spirit"
+msgstr "Espíritu"
+
+#: tracker.php:65
+msgid "Wraith"
+msgstr "Espectro"
+
+#: tracker.php:74
+msgid "Phantom"
+msgstr "Fantasma"
+
+#: tracker.php:83
+msgid "Poltergeist"
+msgstr "Poltergeist"
+
+#: tracker.php:92
+msgid "Banshee"
+msgstr "Banshee"
+
+#: tracker.php:101
+msgid "Jinn"
+msgstr "Jinn"
+
+#: tracker.php:110
+msgid "Mare"
+msgstr "Yegua"
+
+#: tracker.php:119
+msgid "Revenant"
+msgstr "Ingresa"
+
+#: tracker.php:128
+msgid "Shade"
+msgstr "Sombra"
+
+#: tracker.php:137
+msgid "Demon"
+msgstr "Demonio"
+
+#: tracker.php:146
+msgid "Yurei"
+msgstr "Yurei"
+
+#: tracker.php:155
+msgid "Oni"
+msgstr "Oni"
+>>>>>>> dev

@@ -1,6 +1,13 @@
 <?php
 require_once "includes/config.php";
 const PAGE_TITLE = "Randomizer - Phasmophobia Randomizer";
+const PAGE_DESCRIPTION = "Phasmophobia Randomizer is a random game generator that will mix objects and maps to make you play the game differently.";
+
+// JS file check
+$fileItems = "js/lang/items_$lang.js";
+if (!file_exists($fileItems)) {
+  $fileItems = "js/lang/items_en.js";
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $lang; ?>">
@@ -47,11 +54,11 @@ const PAGE_TITLE = "Randomizer - Phasmophobia Randomizer";
           <span><?php _e('Number of items to generate:', 'lang') ?></span>
           <select id="itemsNumber" autocomplete="off">
             <option><?php _e('Choose number of items (default 3)', 'lang') ?></option>
-            <option value="1">1 <?php _e('item', 'lang') ?></option>
-            <option value="2">2 <?php _e('items', 'lang') ?></option>
+            <option value="1">1 <?php _e('item + 1 light', 'lang') ?></option>
+            <option value="2">2 <?php _e('items + 1 light', 'lang') ?></option>
             <option value="3" selected>3 <?php _e('items', 'lang') ?></option>
-            <option value="4">4 <?php _e('items', 'lang') ?></option>
-            <option value="5">5 <?php _e('items', 'lang') ?></option>
+            <option value="4">4 <?php _e('items + 1 light', 'lang') ?></option>
+            <option value="5">5 <?php _e('items + 1 light', 'lang') ?></option>
           </select>
         </label>
         <input type="submit" value="<?php _e('Generate the game', 'lang') ?>">
@@ -152,7 +159,7 @@ const PAGE_TITLE = "Randomizer - Phasmophobia Randomizer";
   <script defer src="js/jquery.min.js?v3.5.1"></script>
   <script defer src="js/utils.min.js?v=<?php echo $version; ?>"></script>
   <script defer src="js/safari_items.js?v=<?php echo $version; ?>"></script>
-  <script defer src="js/lang/items_<?php echo $lang; ?>.js?v=<?php echo $version; ?>"></script>
+  <script defer src="<?php echo $fileItems; ?>?v=<?php echo $version; ?>"></script>
   <script defer src="js/maps.js?v=<?php echo $version; ?>"></script>
   <script defer src="js/Hunter.min.js?v=<?php echo $version; ?>"></script>
   <script defer src="js/AppHunt.min.js?v=<?php echo $version; ?>"></script>

@@ -1,5 +1,5 @@
 header::after {
-  animation: lightBlink 4s ease 0s infinite;
+  animation: lightBlink 15s ease 0s infinite;
   content: "";
   box-shadow: 0 0 110px 4px var(--white);
   display: block;
@@ -32,20 +32,27 @@ td>label {
   display: inline;
 }
 
-.checkEvid {
-  margin: 0 4em;
-}
-
 #evidences tr.row-active {
   background-color: var(--green);
 }
 
 #evidences tr.row-negative {
-  background-color: var(--orange);
+  background-color: var(--light-red);
 }
 
 #evidences tr.row-disabled {
   background-color: var(--red);
+}
+
+#ghostInfo {
+  font-size: 0.8em;
+  text-align: justify;
+}
+
+.evid_row th:hover {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  cursor: pointer;
 }
 
 /** Orb element */
@@ -83,19 +90,35 @@ td>label {
     box-shadow: 0 0 110px 4px var(--white);
   }
 
-  64% {
+  63.1% {
     box-shadow: 0 0 110px 4px transparent;
   }
 
-  66% {
+  64% {
     box-shadow: 0 0 110px 4px var(--white);
   }
 
-  67% {
+  64.1% {
     box-shadow: 0 0 110px 4px transparent;
   }
 
-  69% {
+  65% {
+    box-shadow: 0 0 110px 4px var(--white);
+  }
+
+  90% {
+    box-shadow: 0 0 110px 4px var(--white);
+  }
+
+  90.1% {
+    box-shadow: 0 0 110px 4px transparent;
+  }
+
+  99.9% {
+    box-shadow: 0 0 110px 4px transparent;
+  }
+
+  100% {
     box-shadow: 0 0 110px 4px var(--white);
   }
 }
@@ -131,6 +154,7 @@ td>label {
 }
 
 @font-face {
+  font-display: swap;
   font-family: Yahfie;
   font-style: normal;
   font-weight: 400;
@@ -138,6 +162,7 @@ td>label {
 }
 
 @font-face {
+  font-display: swap;
   font-family: Yahfie;
   font-style: normal;
   font-weight: 700;
@@ -145,6 +170,7 @@ td>label {
 }
 
 @font-face {
+  font-display: swap;
   font-family: OctoberCrow;
   font-style: normal;
   font-weight: 700;
