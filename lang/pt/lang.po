@@ -2,17 +2,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PhasmoRandomizer\n"
 <<<<<<< HEAD
+<<<<<<< HEAD
 "POT-Creation-Date: 2020-11-12 11:37+0100\n"
 "PO-Revision-Date: 2020-11-12 15:44+0100\n"
 "Last-Translator: tristantheb <tristantheb@gmail.com>\n"
 "Language-Team: tristantheb Production\n"
 "Language: fr_FR\n"
 =======
+=======
+>>>>>>> dev
 "POT-Creation-Date: 2020-11-14 12:06+0100\n"
 "PO-Revision-Date: 2020-11-14 12:12+0100\n"
 "Last-Translator: tristantheb <tristantheb@gmail.com>\n"
 "Language-Team: tristantheb Production\n"
 "Language: pt_PT\n"
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +36,7 @@ msgstr ""
 #: includes/footer.php:4
 msgid "Home page"
 <<<<<<< HEAD
+<<<<<<< HEAD
 msgstr ""
 
 #: includes/footer.php:5
@@ -46,6 +53,8 @@ msgstr ""
 
 #: includes/footer.php:15
 =======
+=======
+>>>>>>> dev
 msgstr "Página inicial"
 
 #: includes/footer.php:5
@@ -69,6 +78,9 @@ msgid "Open in external window"
 msgstr "Abrir na janela externa"
 
 #: includes/footer.php:17
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 msgid ""
 "All content coming from the game Phasmophobia and being used on the site "
@@ -79,6 +91,7 @@ msgid ""
 "tristantheb Production."
 msgstr ""
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #: index.php:13 rules.php:13
 msgid ""
@@ -87,6 +100,8 @@ msgstr ""
 
 #: index.php:17
 =======
+=======
+>>>>>>> dev
 "Todo o conteúdo proveniente do jogo Phasmophobia e sendo utilizado no site "
 "pertence ao Kinetic Game.<br>\n"
 "A ideia do aleatorizador vem de Insym e foi editada por GuzzLIVE.<br>\n"
@@ -101,11 +116,15 @@ msgstr ""
 "aleatória."
 
 #: index.php:18
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 msgid ""
 "Javascript is disabled on your browser. To use this site, you need to have "
 "Javascript enabled and running or active it."
 msgstr ""
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 #: index.php:20
@@ -215,6 +234,8 @@ msgstr ""
 
 #: rules.php:21
 =======
+=======
+>>>>>>> dev
 "O Javascript está desactivado no seu navegador. Para utilizar este site, é "
 "necessário ter o Javascript activado e a funcionar ou activo."
 
@@ -329,12 +350,16 @@ msgstr ""
 "tirar a sua fotografia (validada no diário)</strong> antes de sair do jogo."
 
 #: rules.php:22
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 msgid ""
 "You get a randomly chosen light source before the game starts. The team will "
 "have ONE photo camera (others need to be dropped on the randomizer), a front "
 "camera in multiplayer for each players."
 msgstr ""
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 #: rules.php:23 rules.php:42
@@ -343,6 +368,8 @@ msgstr ""
 
 #: rules.php:25
 =======
+=======
+>>>>>>> dev
 "Recebe-se uma fonte de luz escolhida aleatoriamente antes do início do jogo. "
 "A equipa terá UMA câmara fotográfica (outras precisam de ser largadas no "
 "aleatorizador), uma câmara frontal em multiplayer para cada jogador."
@@ -352,11 +379,15 @@ msgid "Items per players"
 msgstr "Itens por jogador"
 
 #: rules.php:26
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 msgid ""
 "Objects are chosen randomly before the start of the game according to the "
 "number of players as follows:"
 msgstr ""
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 #: rules.php:26 rules.php:44
@@ -377,6 +408,8 @@ msgstr ""
 
 #: rules.php:30
 =======
+=======
+>>>>>>> dev
 "Os objectos são escolhidos aleatoriamente antes do início do jogo de acordo "
 "com o número de jogadores, como se segue:"
 
@@ -397,6 +430,9 @@ msgid "4 players = 1 item/players"
 msgstr "4 jogadores = 1 item/jogadores"
 
 #: rules.php:31
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 msgid ""
 "A photo camera for the whole team is provided at the beginning of the game "
@@ -405,9 +441,12 @@ msgid ""
 "the players will each have to have a front camera."
 msgstr ""
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #: rules.php:31 rules.php:47
 =======
+=======
+>>>>>>> dev
 "Uma câmara fotográfica para toda a equipa é fornecida no início do jogo, a "
 "fim de validar o objectivo fotográfico da entidade. Um isqueiro está "
 "disponível como padrão para evitar que o incenso e a vela sejam "
@@ -415,11 +454,15 @@ msgstr ""
 "fotográfica frontal."
 
 #: rules.php:32 rules.php:48
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 msgid ""
 "It is forbidden to take any objects other than those assigned or to take "
 "those of other players."
 msgstr ""
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 #: rules.php:35
@@ -428,6 +471,8 @@ msgstr ""
 
 #: rules.php:39
 =======
+=======
+>>>>>>> dev
 "É proibido levar quaisquer objectos que não sejam os atribuídos ou levar os "
 "de outros jogadores."
 
@@ -436,19 +481,28 @@ msgid "Safari photo Game"
 msgstr "Jogo de fotografia Safari"
 
 #: rules.php:40
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 msgid ""
 "You get a randomly chosen light source before the game starts. The player(s) "
 "will have a camera, a lighter and a go pro in multiplayer."
 msgstr ""
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #: rules.php:40
 =======
+=======
+>>>>>>> dev
 "Recebe-se uma fonte de luz escolhida aleatoriamente antes do início do jogo. "
 "O(s) jogador(es) terá(ão) uma câmara, um isqueiro e um go pro em multiplayer."
 
 #: rules.php:41
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 msgid ""
 "To unlock the right to obtain a random object, the player must succeed in "
@@ -457,6 +511,7 @@ msgid ""
 "Each additional validated photo or secondary objective gives the player the "
 "right to obtain a new random object while respecting these restrictions:"
 msgstr ""
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 #: rules.php:50
@@ -467,6 +522,8 @@ msgstr ""
 
 #: rules.php:53
 =======
+=======
+>>>>>>> dev
 "Para desbloquear o direito de obter um objecto aleatório, o jogador deve "
 "conseguir tirar uma fotografia validada no diário (interacção, fantasma, "
 "água suja, impressão, osso...) e/ou passar um objectivo secundário do "
@@ -485,13 +542,19 @@ msgstr ""
 "edifícios."
 
 #: rules.php:54
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 msgid ""
 "Special cases: Solo, the player has the right to one object to be randomized "
 "before the start of the game on High School, and two objects on Asylum."
 msgstr ""
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> dev
 "Casos especiais: Solo, o jogador tem direito a um objecto a ser aleatorizado "
 "antes do início do jogo no Liceu, e a dois objectos no Asilo."
 
@@ -596,4 +659,7 @@ msgstr "Yurei"
 #: tracker.php:155
 msgid "Oni"
 msgstr "Oni"
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev

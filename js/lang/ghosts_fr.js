@@ -7,27 +7,27 @@ function ghostPowers() {
         },
         'wraith': {
             'name': "Spectre",
-            'power': "Les Spectres ne laissent pas d'empreintes de pas à la lumière UV après avoir marché sur un tas de sel. Si la cible du Spectre est dans le lieu hanté (et vivante), il se téléportera à 3 mètres de sa victime.",
+            'power': "Les Spectres ne laissent pas d'empreintes de pas à la lumière UV après avoir marché sur un tas de sel. Si la cible du Spectre est dans le lieu hanté (et vivante), il se téléportera à 3 mètres de sa victime au début de la phase de chasse.",
             'weakness': "Le Spectre possède un multiplicateur d'action qui sera porté à 50 après avoir marché dans le sel. Il entrera moins souvent dans la phase d'attaque."
         },
         'phantom': {
             'name': "Fantôme",
-            'power': "Le Fantôme reste visible plus longtemps que les autres fantômes. Regarder le Fantôme vous fera perdre de la santé mentale.",
-            'weakness': "Prendre une photo de lui le fera disparaître pour une courte période. [Cela n'arrête pas une attaque]"
+            'power': "Le Fantôme reste visible plus longtemps que les autres fantômes (jusqu'à 2 secondes). Regarder le Fantôme vous fera perdre de la santé mentale.",
+            'weakness': "Prendre une photo de lui le fera disparaître pour une courte période. [Cela n'arrête/n'empêche pas une attaque]"
         },
         'poltergeist': {
             'name': "Poltergeist",
-            'power': "Le Poltergeist lancera beaucoup d'objets autour de lui, si un joueur se trouve auprès des objets lancés, sa santé mentale sera réduite de 2 fois le nombre d'objets lancés.",
+            'power': "Le Poltergeist lancera beaucoup d'objets autour de lui, si un joueur se trouve auprès des objets lancés, sa santé mentale sera réduite de : 2 x nombre d'objets lancés x difficulté.",
             'weakness': "S'il se trouve dans une pièce vide, son pouvoir n'est pas possible. Il retournera donc à une phase d'inactivité."
         },
         'banshee': {
             'name': "Banshee",
-            'power': "La Banshee peut entrer dans la phase de navigation. Pendant cette phase : si la cible, choisie par la Banshee, marche devant le fantôme, une phase d'attaque commence. (Indépendamment de la santé mentale)",
-            'weakness': "Si la cible de la Banshee se trouve en dehors du lieu hanté, la Banshee ne peut pas utiliser son pouvoir. Elle agira/attaquera comme un fantôme classique. Les crucifix ont une efficacité de 5 mètres pour les Banshee."
+            'power': "La Banshee peut entrer en phase de navigation. Pendant cette phase : si la cible, choisie par la Banshee, se trouve devant le fantôme, une phase d'attaque commence. (Indépendamment de la santé mentale)",
+            'weakness': "Si la cible de la Banshee se trouve en dehors du lieu hanté, la Banshee ne peut pas utiliser son pouvoir. Elle agira/attaquera comme un fantôme classique. Les crucifix ont une efficacité de 5 mètres pour la Banshee."
         },
         'jinn': {
             'name': "Djinn",
-            'power': "Être à moins de 3 mètres d'un Djinn fait chuter instantanément votre santé mentale de 25%. Sa capacité lui permet de se déplacer rapidement si la cible est éloignée de lui, mais reviendra à une vitesse normale une fois qu'une cible sera proche de lui.",
+            'power': "Être à moins de 3 mètres d'un Djinn fait chuter instantanément votre santé mentale de 25%. Sa capacité lui permet de se déplacer rapidement si la cible est éloignée de lui, mais reviendra à une vitesse normale une fois que la cible sera proche de lui.",
             'weakness': "Couper l'électricité permet de bloquer le pouvoir du Djinn. Le Djinn est facile à repérer, il génère en permanence un champ EMF 2."
         },
         'mare': {
@@ -42,7 +42,7 @@ function ghostPowers() {
         },
         'shade': {
             'name': "Ombre",
-            'power': "L'Ombre est très discrète, elle ne se révèle qu'aux personnes seules et elle y a une chance d'entrer dans la phase d'attaque si on laisse une personne seule.",
+            'power': "L'Ombre est très discrète, elle ne se révèle qu'aux personnes seules et elle a une chance d'entrer dans la phase d'attaque, si on laisse une personne seule dans la pièce du fantôme.",
             'weakness': "S'il y a plus d'un joueur dans la salle fantôme, la phase d'attaque n'est pas lancée."
         },
         'demon': {
@@ -57,7 +57,7 @@ function ghostPowers() {
         },
         'oni': {
             'name': "Oni",
-            'power': "L'activité de l'Oni (actions / chasse) augmente s'il y a des gens dans sa pièce. Il fera voles des objets autour de sa victime. Si sa victime voit un objet voler, elle deviendra la cible de l'Oni.",
+            'power': "L'activité de l'Oni (actions / chasse) augmente s'il y a des gens dans sa pièce. Il fera voler des objets autour de sa victime. Si sa victime voit un objet voler, elle deviendra la cible de l'Oni.",
             'weakness': "L'augmentation de l'activité du Oni permet également de le trouver plus facilement."
         }
     }

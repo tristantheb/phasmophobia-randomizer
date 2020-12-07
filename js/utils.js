@@ -1,6 +1,5 @@
 /**
  * Randomize a number in a values fork
- * @param {number} min Get the min number for the random number generator
  * @param {number} max Get the max number for the random number generator
  * 
  * @returns {number}
@@ -56,14 +55,14 @@ function playAudio(fileName, soundLevel = 0.2, loop = false, endLoopDelay = TIME
 function throwError(errText) {
   playAudio("GhostSpook", 0.4);
   $('#errBlock').html('<i class="fa fa-exclamation-triangle"></i> ' + errText);
-  $('#errBlock').fadeIn(500).delay(5000).fadeOut(500, () => {$('#errBlock').html('&nbsp;');});
+  $('#errBlock').fadeIn(500).delay(5000).fadeOut(500, () => { $('#errBlock').html('&nbsp;'); });
 }
 
 /**
  * XSS Security
  */
-function htmlEncode(str){
-  return String(str).replace(/[^\w. ]/gi, function(c){
-     return '&#'+c.charCodeAt(0)+';';
+function htmlEncode(str) {
+  return String(str).replace(/[^\w. ]/gi, function (c) {
+    return '&#' + c.charCodeAt(0) + ';';
   });
 }

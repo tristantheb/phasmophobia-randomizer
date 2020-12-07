@@ -34,8 +34,13 @@ a:link {
   color: var(--light-gray);
 }
 
-a:hover {
+a:hover,
+a:not(.btn) {
   color: var(--white);
+}
+
+a.btn {
+  color: var(--black);
 }
 
 header,
@@ -97,7 +102,8 @@ footer hr {
  */
 button,
 input,
-select {
+select,
+.btn {
   font-weight: bold;
   padding: .75em 1.25em;
 }
@@ -108,7 +114,8 @@ select {
 
 input[type="text"],
 input[type="button"],
-button {
+button,
+.btn {
   background-color: white;
   box-shadow: inset 0 0 10px var(--gray);
   border: 3px solid var(--gray);
@@ -132,7 +139,8 @@ select {
 
 input:hover,
 button:hover,
-select:hover {
+select:hover,
+.btn:hover {
   box-shadow: inset 0 0 10px var(--gray), 0 0 10px var(--white);
 }
 

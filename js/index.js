@@ -2,7 +2,7 @@ const appHunt = new AppHunt();
 const appSafari = new AppSafari();
 const TIMEOUT_DELAY = 5000;
 
-if(!localStorage.getItem("SHOW_ANIMATION")) {
+if (!localStorage.getItem("SHOW_ANIMATION")) {
   localStorage.setItem("SHOW_ANIMATION", true);
 }
 var SHOW_ANIMATION = localStorage.getItem("SHOW_ANIMATION") === "true" ? true : false;
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
   const $wheelAnim = document.querySelector("#wheelAnim");
   $wheelAnim.checked = SHOW_ANIMATION;
   $wheelAnim.addEventListener("click", function changeCheck() {
-    if(this.checked) {
+    if (this.checked) {
       SHOW_ANIMATION = true;
       localStorage.setItem("SHOW_ANIMATION", true);
     } else {
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
       }
     }
 
-    if(canRender) {
+    if (canRender) {
       SHOW_ANIMATION ? animateRender(htmlRender, appHunt) : htmlRender(appHunt);
     }
   });
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
 
   // Add item to the hunter and enable the animation
   $submits.forEach(submit => {
-    submit.addEventListener('click', () => {addItemAndWheel(submit)});
+    submit.addEventListener('click', () => { addItemAndWheel(submit) });
   });
 
   // Submit form for Safari mode
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
     let id = htmlElement.getAttribute('data-itemadd') - 1, hunter = appSafari.getHunterById(id);
     var canRender = appSafari.generateItem(hunter);
 
-    if(canRender) {
+    if (canRender) {
       SHOW_ANIMATION ? animateOneItem(htmlRender, appSafari, hunter) : htmlRender(appSafari);
     }
   }
@@ -125,13 +125,13 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
    * Global
    */
   $gen_map.addEventListener("click", function generateMap(event) {
-    event.preventDefault(); 
+    event.preventDefault();
     appHunt.generateMap();
 
-    let audioName = ['Adult', 'Attack', 'Away', 'Baby', 'Behind', 'Child', 'Close', 'Dad', 'Daughter', 'Death', 'Die', 'Far', 'Hate', 'Here', 'Hurt', 'Kid', 'Kill', 'Mum', 'Next', 'Old',  'Son', 'Young'];
+    let audioName = ['Adult', 'Attack', 'Away', 'Baby', 'Behind', 'Child', 'Close', 'Dad', 'Daughter', 'Death', 'Die', 'Far', 'Hate', 'Here', 'Hurt', 'Kid', 'Kill', 'Mum', 'Next', 'Old', 'Son', 'Young'];
     let audioFile = audioName[getRandomInt(audioName.length)];
 
-    
+
     playAudio(audioFile, 0.2, false);
 
     const $mapName = document.querySelector("#map_name");
@@ -144,24 +144,26 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
  * @param {object} app The app object
  */
 function htmlRender(app) {
-  var hunters = app.getHunters();
+  var hunters = app.getHunters(), data = "";
+  localStorage.clear();
+  localStorage.setItem("SHOW_ANIMATION", SHOW_ANIMATION);
   for (let i = 0; i < hunters.length; i++) {
     // Get elements
     const hunter = hunters[i].getAsObject();
     let hunt = i + 1;
     const $hunterList = document.querySelector("#hunter-" + hunt);
-
-    // Set Hunter name on the HTML
     $hunterList.innerHTML = "<p class=\"hunter_name t-center\">" + hunter.username + "</p>";
-
-    // Get list an set on HTML element
-    let li = "";
+    localStorage.setItem("hunterName" + i, hunter.username);
+    let li = "", itemsList = "";
     hunter.itemList.forEach(list => {
       let item = checkOnDualList(list[0], items);
       item = !item ? checkOnDualList(list[0], itemsLights) : item;
       li += "<li><img src=\"./img/" + list[0] + ".png\" alt=\"" + item + "\"> " + item + "</li>";
+      itemsList += "<img src=\"./img/" + list[0] + ".png\" alt=\"" + item + "\"> " + item + " ";
     });
-    // Push list on HTML
+    itemsList += "<br>";
+
+    localStorage.setItem("hunterItems" + i, itemsList);
     $hunterList.innerHTML += "<ul class=\"items-list\">" + li + "</ul>";
   }
 

@@ -2,8 +2,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PhasmoRandomizer\n"
 <<<<<<< HEAD
+<<<<<<< HEAD
 "POT-Creation-Date: 2020-11-14 11:15+0100\n"
 "PO-Revision-Date: 2020-11-14 11:15+0100\n"
+=======
+"POT-Creation-Date: 2020-11-18 01:56+0100\n"
+"PO-Revision-Date: 2020-11-18 01:56+0100\n"
+>>>>>>> dev
 =======
 "POT-Creation-Date: 2020-11-18 01:56+0100\n"
 "PO-Revision-Date: 2020-11-18 01:56+0100\n"
@@ -37,6 +42,7 @@ msgid "Rules of randomizer"
 msgstr "Règles du Randomiseur"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: includes/footer.php:6
 msgid "Ghost (Un)Tracker"
 msgstr "(Anti)Traceur de fantôme"
@@ -69,6 +75,21 @@ msgstr "Ouvrir en fenêtre externe"
 
 #: includes/footer.php:19
 >>>>>>> dev
+=======
+#: includes/footer.php:9
+msgid "Ghost (Un)Tracker"
+msgstr "(Anti)Traceur de fantôme"
+
+#: includes/footer.php:10
+msgid "Report an issue"
+msgstr "Signaler un bug"
+
+#: includes/footer.php:11
+msgid "Open in external window"
+msgstr "Ouvrir en fenêtre externe"
+
+#: includes/footer.php:19
+>>>>>>> dev
 msgid ""
 "All content coming from the game Phasmophobia and being used on the site "
 "belongs to Kinetic Game.<br>\n"
@@ -84,8 +105,11 @@ msgstr ""
 "tristantheb Production."
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: index.php:13 rules.php:13
 =======
+=======
+>>>>>>> dev
 #: includes/footer.php:24
 msgid "Social medias"
 msgstr "Réseaux sociaux"
@@ -103,6 +127,9 @@ msgid "Phasmophobia Official Discord"
 msgstr "Discord Officiel de Phasmophobia"
 
 #: index.php:20 rules.php:14
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 msgid ""
 "Generate a game of investigation and ghost hunting in a totally random way."
@@ -111,7 +138,11 @@ msgstr ""
 "totalement aléatoire."
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: index.php:17
+=======
+#: index.php:24
+>>>>>>> dev
 =======
 #: index.php:24
 >>>>>>> dev
@@ -121,6 +152,7 @@ msgid ""
 msgstr ""
 "Javascript est désactivé sur votre navigateur. Pour utiliser le site, vous "
 "devez avoir Javascript activé, ou bien l'activer."
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 #: index.php:20 rules.php:17
@@ -326,6 +358,113 @@ msgstr ""
 "Vous arrivez dans une pièce, mais à part un tableau très effrayant d'un "
 "homme qui vous regarde, il n'y a rien..."
 
+=======
+
+#: index.php:27 rules.php:18
+msgid "Classic game"
+msgstr "Partie classique"
+
+#: index.php:28
+msgid "Safari photo game"
+msgstr "Partie de Safari photo"
+
+#: index.php:30
+msgid "Roll map"
+msgstr "Choisir une carte"
+
+#: index.php:31
+msgid "Enable wheel animation?"
+msgstr "Activer l'animation de la roue ?"
+
+#: index.php:35
+msgid "Classic game - Randomize the hunt"
+msgstr "Partie classique - Mélanger la chasse"
+
+#: index.php:38 index.php:74
+msgid "First hunter:"
+msgstr "Premier chasseur :"
+
+#: index.php:42 index.php:85
+msgid "Second hunter:"
+msgstr "Second chasseur :"
+
+#: index.php:46 index.php:96
+msgid "Third hunter:"
+msgstr "Troisième chasseur :"
+
+#: index.php:50 index.php:107
+msgid "Fourth hunter:"
+msgstr "Quatrième chasseur :"
+
+#: index.php:54
+msgid "Number of items to generate:"
+msgstr "Nombre d'objets par joueur :"
+
+#: index.php:56
+msgid "Choose number of items (default 3)"
+msgstr "Choisir un nombre d'objets (3 par défaut)"
+
+#: index.php:57
+msgid "item + 1 light"
+msgstr "objet + 1 lumière"
+
+#: index.php:58 index.php:60 index.php:61
+msgid "items + 1 light"
+msgstr "objets + 1 lumière"
+
+#: index.php:59
+msgid "items"
+msgstr "objets"
+
+#: index.php:64 index.php:115
+msgid "Generate the game"
+msgstr "Générer la partie"
+
+#: index.php:69
+msgid "Safari photo Game - Randomize the hunt"
+msgstr "Partie de Safari photo - Mélanger la chasse"
+
+#: index.php:79
+msgid "Add item to hunter one"
+msgstr "Donner un objet au chasseur 1"
+
+#: index.php:90
+msgid "Add item to hunter two"
+msgstr "Donner un objet au chasseur 2"
+
+#: index.php:101
+msgid "Add item to hunter three"
+msgstr "Donner un objet au chasseur 3"
+
+#: index.php:112
+msgid "Add item to hunter fourth"
+msgstr "Donner un objet au chasseur 4"
+
+#: index.php:119
+msgid "Results"
+msgstr "Résultats"
+
+#: index.php:123 index.php:129 index.php:135 index.php:141
+msgid "Hunter name"
+msgstr "Nom du chasseur"
+
+#: index.php:125 index.php:131 index.php:137 index.php:143
+msgid "Item list"
+msgstr "Liste d'objets"
+
+#: not_found.php:13
+msgid "Page not found"
+msgstr "Page non trouvée"
+
+#: not_found.php:14
+msgid ""
+"You arrive in a room, but except for a very frightening painting of a man "
+"watching you, there is nothing..."
+msgstr ""
+"Vous arrivez dans une pièce, mais à part un tableau très effrayant d'un "
+"homme qui vous regarde, il n'y a rien..."
+
+>>>>>>> dev
 #: rules.php:13
 msgid "Rules of Phasmophobia Randomizer"
 msgstr "Règles de Phasmophobia Randomizer"
@@ -349,6 +488,7 @@ msgstr ""
 "prendre sa photo (validée dans le journal)</strong> avant de quitter le jeu."
 
 #: rules.php:22
+<<<<<<< HEAD
 >>>>>>> dev
 msgid ""
 "You get a randomly chosen light source before the game starts. The team will "
@@ -363,6 +503,8 @@ msgstr ""
 "prendre sa photo (validée dans le journal)</strong> avant de quitter le jeu."
 
 #: rules.php:21
+=======
+>>>>>>> dev
 msgid ""
 "You get a randomly chosen light source before the game starts. The team will "
 "have ONE photo camera (others need to be dropped on the randomizer), a front "
@@ -372,6 +514,7 @@ msgstr ""
 "L'équipe aura UN appareil photo (les autres doivent être obtenus sur le "
 "randomiseur), une caméra frontale en multijoueur pour chaque joueur."
 
+<<<<<<< HEAD
 #: rules.php:23 rules.php:42
 msgid "Items per players"
 msgstr "Objets par joueurs"
@@ -388,6 +531,13 @@ msgstr "Objets par joueurs"
 
 #: rules.php:26
 >>>>>>> dev
+=======
+#: rules.php:24 rules.php:43
+msgid "Items per players"
+msgstr "Objets par joueurs"
+
+#: rules.php:26
+>>>>>>> dev
 msgid ""
 "Objects are chosen randomly before the start of the game according to the "
 "number of players as follows:"
@@ -395,6 +545,7 @@ msgstr ""
 "Les objets sont choisis au hasard avant le début du jeu en fonction du "
 "nombre de joueurs comme suit :"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #: rules.php:26 rules.php:44
 msgid "1 player = 5 items"
@@ -414,6 +565,8 @@ msgstr "4 joueurs = 1 objet/joueurs"
 
 #: rules.php:30
 =======
+=======
+>>>>>>> dev
 #: rules.php:27 rules.php:45
 msgid "1 player = 5 items"
 msgstr "1 joueur = 5 objets"
@@ -431,6 +584,9 @@ msgid "4 players = 1 item/players"
 msgstr "4 joueurs = 1 objet/joueurs"
 
 #: rules.php:31
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 msgid ""
 "A photo camera for the whole team is provided at the beginning of the game "
@@ -444,7 +600,11 @@ msgstr ""
 "joueurs devront chacun disposer d'une caméra frontale."
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: rules.php:31 rules.php:47
+=======
+#: rules.php:32 rules.php:48
+>>>>>>> dev
 =======
 #: rules.php:32 rules.php:48
 >>>>>>> dev
@@ -456,11 +616,19 @@ msgstr ""
 "prendre ceux des autres joueurs."
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: rules.php:35
 msgid "Safari photo Game"
 msgstr "Partie de Safari photo"
 
 #: rules.php:39
+=======
+#: rules.php:36
+msgid "Safari photo Game"
+msgstr "Partie de Safari photo"
+
+#: rules.php:40
+>>>>>>> dev
 =======
 #: rules.php:36
 msgid "Safari photo Game"
@@ -477,7 +645,11 @@ msgstr ""
 "caméra frontale en multijoueur."
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: rules.php:40
+=======
+#: rules.php:41
+>>>>>>> dev
 =======
 #: rules.php:41
 >>>>>>> dev
@@ -496,7 +668,11 @@ msgstr ""
 "restrictions :"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: rules.php:50
+=======
+#: rules.php:51
+>>>>>>> dev
 =======
 #: rules.php:51
 >>>>>>> dev
@@ -510,7 +686,11 @@ msgstr ""
 "donner de la lumière que dans les bâtiments."
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: rules.php:53
+=======
+#: rules.php:54
+>>>>>>> dev
 =======
 #: rules.php:54
 >>>>>>> dev
@@ -521,6 +701,7 @@ msgstr ""
 "Cas particuliers : En solo, le joueur a droit à un objet à randomiser avant "
 "le début du jeu sur High School, et à deux objets sur Asylum."
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #: tracker.php:12
 msgid "Tracker of Phasmophobia"
@@ -624,6 +805,8 @@ msgstr "Yurei"
 msgid "Oni"
 msgstr "Oni"
 =======
+=======
+>>>>>>> dev
 #: tracker.php:19
 msgid "Tracker of Phasmophobia"
 msgstr "Traqueur de Phasmophobia Randomizer"
@@ -732,4 +915,7 @@ msgstr "Oni"
 
 #~ msgid "item"
 #~ msgstr "objet"
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev

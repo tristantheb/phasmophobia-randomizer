@@ -19,6 +19,11 @@ if (!file_exists($fileItems)) {
     <h1>Phasmophobia Randomizer</h1>
     <p><?php _e('Generate a game of investigation and ghost hunting in a totally random way.', 'lang') ?></p>
   </header>
+  <br>
+  <p class="info-box w-50 m-auto">
+    → The site uses the development branch of the game, please pass your game in Beta version in the Steam properties of the game to get the Prison.<br>
+    → La site utilise la branche de développement du jeu, veuillez passer votre jeu en version Bêta dans les propriétés Steam du jeu pour avoir la Prison.
+  </p>
   <main>
     <section class="table_game">
       <noscript class="error-box"><?php _e('Javascript is disabled on your browser. To use this site, you need to have Javascript enabled and running or active it.', 'lang') ?></noscript>
@@ -56,7 +61,7 @@ if (!file_exists($fileItems)) {
             <option><?php _e('Choose number of items (default 3)', 'lang') ?></option>
             <option value="1">1 <?php _e('item + 1 light', 'lang') ?></option>
             <option value="2">2 <?php _e('items + 1 light', 'lang') ?></option>
-            <option value="3" selected>3 <?php _e('items', 'lang') ?></option>
+            <option value="3" selected>3 <?php _e('items + 1 light', 'lang') ?></option>
             <option value="4">4 <?php _e('items + 1 light', 'lang') ?></option>
             <option value="5">5 <?php _e('items + 1 light', 'lang') ?></option>
           </select>
@@ -156,7 +161,7 @@ if (!file_exists($fileItems)) {
   <div class="orb">&nbsp;</div>
   <?php require_once "./includes/footer.php"; ?>
   <!-- start:Scripts -->
-  <script defer src="js/jquery.min.js?v3.5.1"></script>
+  <script defer src="js/jquery.min.js?v=3.5.1"></script>
   <script defer src="js/utils.min.js?v=<?php echo $version; ?>"></script>
   <script defer src="js/safari_items.js?v=<?php echo $version; ?>"></script>
   <script defer src="<?php echo $fileItems; ?>?v=<?php echo $version; ?>"></script>

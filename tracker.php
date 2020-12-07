@@ -176,21 +176,18 @@ if (!file_exists($fileGhosts)) {
   </main>
   <?php require_once "./includes/footer.php"; ?>
   <script>
-  /**
-   * Preloading page
-   */
-  document.addEventListener("DOMContentLoaded", function preload() {
-    var $links = document.querySelectorAll("link[rel=preload]");
-    $links.forEach(link => {
-      link.rel = "stylesheet"
+    /**
+     * Preloading page
+     */
+    document.addEventListener("DOMContentLoaded", function preload() {
+      var $links = document.querySelectorAll("link[rel=preload]");
+      $links.forEach(link => {
+        link.rel = "stylesheet"
+      });
     });
-  });
   </script>
   <script defer src="js/indexTrack.min.js?v=<?php echo $version; ?>"></script>
-<<<<<<< HEAD
-=======
   <script defer src="<?php echo $fileGhosts; ?>?v=<?php echo $version; ?>"></script>
->>>>>>> dev
 </body>
 
 </html>

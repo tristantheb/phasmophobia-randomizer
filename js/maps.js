@@ -5,5 +5,6 @@ var maps = [
   "Grafton Farmhouse",
   "Bleadsdale Farmhouse",
   "Brownstone High school",
-  "Asylum"
+  "Asylum",
+  "Prison"
 ];

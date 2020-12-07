@@ -2,8 +2,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PhasmoRandomizer\n"
 <<<<<<< HEAD
+<<<<<<< HEAD
 "POT-Creation-Date: 2020-11-12 11:41+0100\n"
 "PO-Revision-Date: 2020-11-14 11:16+0100\n"
+=======
+"POT-Creation-Date: 2020-11-14 12:07+0100\n"
+"PO-Revision-Date: 2020-11-14 12:07+0100\n"
+>>>>>>> dev
 =======
 "POT-Creation-Date: 2020-11-14 12:07+0100\n"
 "PO-Revision-Date: 2020-11-14 12:07+0100\n"
@@ -34,8 +39,13 @@ msgstr "Regeln des Zufallsgenerators"
 
 #: includes/footer.php:6
 <<<<<<< HEAD
+<<<<<<< HEAD
 msgid "Report an issue"
 msgstr "Ein Problem melden"
+=======
+msgid "Ghost (Un)Tracker"
+msgstr "Geister-(Un)spurenleser"
+>>>>>>> dev
 =======
 msgid "Ghost (Un)Tracker"
 msgstr "Geister-(Un)spurenleser"
@@ -48,10 +58,19 @@ msgstr "Ein Problem melden"
 #: includes/footer.php:8
 msgid "Phasmophobia Official Discord"
 msgstr "Phasmophobia Offizielle Discord"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 #: includes/footer.php:15
 =======
+#: includes/footer.php:9
+msgid "Open in external window"
+msgstr "In externem Fenster öffnen"
+
+#: includes/footer.php:17
+>>>>>>> dev
+=======
+
 #: includes/footer.php:9
 msgid "Open in external window"
 msgstr "In externem Fenster öffnen"
@@ -74,7 +93,11 @@ msgstr ""
 "tristantheb Production."
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: index.php:13 rules.php:13
+=======
+#: index.php:14 rules.php:14
+>>>>>>> dev
 =======
 #: index.php:14 rules.php:14
 >>>>>>> dev
@@ -85,7 +108,11 @@ msgstr ""
 "willkürliche Weise."
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: index.php:17
+=======
+#: index.php:18
+>>>>>>> dev
 =======
 #: index.php:18
 >>>>>>> dev
@@ -96,6 +123,7 @@ msgstr ""
 "Javascript ist in Ihrem Browser deaktiviert. Um diese Website zu benutzen, "
 "müssen Sie Javascript aktiviert haben und es ausführen oder aktivieren."
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #: index.php:20
 msgid "Classic game (1-4 players)"
@@ -215,6 +243,52 @@ msgstr "Anzahl der zu generierenden Elemente:"
 msgid "Choose number of items (default 3)"
 msgstr "Anzahl der Artikel wählen (Standard 3)"
 
+=======
+#: index.php:21 rules.php:18
+msgid "Classic game"
+msgstr "Klassisches Spiel"
+
+#: index.php:22
+msgid "Safari photo game"
+msgstr "Safari-Fotospiel"
+
+#: index.php:24
+msgid "Roll map"
+msgstr "Karte rollen"
+
+#: index.php:25
+msgid "Enable wheel animation?"
+msgstr "Rad-Animation aktivieren?"
+
+#: index.php:29
+msgid "Classic game - Randomize the hunt"
+msgstr "Klassisches Wild - Die Jagd randomisieren"
+
+#: index.php:32 index.php:68
+msgid "First hunter:"
+msgstr "Erster Jäger:"
+
+#: index.php:36 index.php:79
+msgid "Second hunter:"
+msgstr "Zweiter Jäger:"
+
+#: index.php:40 index.php:90
+msgid "Third hunter:"
+msgstr "Dritter Jäger:"
+
+#: index.php:44 index.php:101
+msgid "Fourth hunter:"
+msgstr "Vierter Jäger:"
+
+#: index.php:48
+msgid "Number of items to generate:"
+msgstr "Anzahl der zu generierenden Elemente:"
+
+#: index.php:50
+msgid "Choose number of items (default 3)"
+msgstr "Anzahl der Artikel wählen (Standard 3)"
+
+>>>>>>> dev
 #: index.php:51
 msgid "item"
 msgstr "artikel"
@@ -260,6 +334,7 @@ msgstr "Name des Jägers"
 msgid "Item list"
 msgstr "Artikel-Liste"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #: rules.php:12
 msgid "Rules of Phasmophobia Randomizer"
@@ -317,11 +392,42 @@ msgid ""
 "have ONE photo camera (others need to be dropped on the randomizer), a front "
 "camera in multiplayer for each players."
 msgstr ""
+=======
+#: rules.php:13
+msgid "Rules of Phasmophobia Randomizer"
+msgstr "Regeln des Phasmophobia-Randomisierers"
+
+#: rules.php:19 rules.php:37
+msgid "Objectives"
+msgstr "Zielsetzungen"
+
+#: rules.php:21 rules.php:39
+msgid ""
+"The objectives to take at least <strong>a picture of the entity</strong> and "
+"<strong>to determine its nature</strong> using the objects acquired by the "
+"randomizer. <strong>The player(s)</strong> can be mistaken about the nature "
+"of the entity but <strong>must imperatively take its photo (validated in the "
+"journal)</strong> before leaving the game."
+msgstr ""
+"Die Ziele, mindestens <strong>ein Bild der Entität</strong> zu machen und "
+"<strong>ihre Natur</strong> anhand der vom Randomisierer erfassten Objekte "
+"zu bestimmen. <strong>Der/die Spieler</strong> kann/können sich über die "
+"Natur der Entität irren, aber <strong>muss unbedingt vor Verlassen des "
+"Spiels sein Foto (im Journal bestätigt)</strong> machen."
+
+#: rules.php:22
+msgid ""
+"You get a randomly chosen light source before the game starts. The team will "
+"have ONE photo camera (others need to be dropped on the randomizer), a front "
+"camera in multiplayer for each players."
+msgstr ""
+>>>>>>> dev
 "Sie erhalten eine zufällig ausgewählte Lichtquelle, bevor das Spiel beginnt. "
 "Die Mannschaft verfügt über EINE Fotokamera (andere müssen auf den "
 "Zufallsgenerator fallen gelassen werden), eine Frontkamera im "
 "Mehrspielermodus für jeden Spieler."
 
+<<<<<<< HEAD
 #: rules.php:23 rules.php:42
 msgid "Items per players"
 msgstr "Gegenstände pro Spieler"
@@ -339,6 +445,13 @@ msgstr "Gegenstände pro Spieler"
 
 #: rules.php:26
 >>>>>>> dev
+=======
+#: rules.php:24 rules.php:43
+msgid "Items per players"
+msgstr "Gegenstände pro Spieler"
+
+#: rules.php:26
+>>>>>>> dev
 msgid ""
 "Objects are chosen randomly before the start of the game according to the "
 "number of players as follows:"
@@ -346,6 +459,7 @@ msgstr ""
 "Die Objekte werden vor Spielbeginn nach dem Zufallsprinzip entsprechend der "
 "Anzahl der Spieler wie folgt ausgewählt:"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #: rules.php:26 rules.php:44
 msgid "1 player = 5 items"
@@ -383,6 +497,25 @@ msgstr "4 Spieler = 1 Gegenstand/Spieler"
 
 #: rules.php:31
 >>>>>>> dev
+=======
+#: rules.php:27 rules.php:45
+msgid "1 player = 5 items"
+msgstr "1 Spieler = 5 Gegenstände"
+
+#: rules.php:28 rules.php:46
+msgid "2 players = 3 items/players"
+msgstr "2 Spieler = 3 Gegenstände/Spieler"
+
+#: rules.php:29 rules.php:47
+msgid "3 players = 2 items/players"
+msgstr "3 Spieler = 2 Gegenstände/Spieler"
+
+#: rules.php:30
+msgid "4 players = 1 item/players"
+msgstr "4 Spieler = 1 Gegenstand/Spieler"
+
+#: rules.php:31
+>>>>>>> dev
 msgid ""
 "A photo camera for the whole team is provided at the beginning of the game "
 "in order to validate the entity's photo objective. A lighter is available as "
@@ -396,7 +529,11 @@ msgstr ""
 "eine Frontkamera verfügen."
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: rules.php:31 rules.php:47
+=======
+#: rules.php:32 rules.php:48
+>>>>>>> dev
 =======
 #: rules.php:32 rules.php:48
 >>>>>>> dev
@@ -408,11 +545,19 @@ msgstr ""
 "Gegenstände anderer Spieler mitzunehmen."
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: rules.php:35
 msgid "Safari photo Game"
 msgstr "Safari-Foto-Spiel"
 
 #: rules.php:39
+=======
+#: rules.php:36
+msgid "Safari photo Game"
+msgstr "Safari-Foto-Spiel"
+
+#: rules.php:40
+>>>>>>> dev
 =======
 #: rules.php:36
 msgid "Safari photo Game"
@@ -429,7 +574,11 @@ msgstr ""
 "im Mehrspielermodus."
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: rules.php:40
+=======
+#: rules.php:41
+>>>>>>> dev
 =======
 #: rules.php:41
 >>>>>>> dev
@@ -448,7 +597,11 @@ msgstr ""
 "dieser Einschränkungen zu erhalten:"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: rules.php:50
+=======
+#: rules.php:51
+>>>>>>> dev
 =======
 #: rules.php:51
 >>>>>>> dev
@@ -458,10 +611,18 @@ msgid ""
 "in buildings."
 msgstr ""
 <<<<<<< HEAD
+<<<<<<< HEAD
 "Dieser Spielmodus eignet sich nicht für einen 4-Spieler-Mehrspieler-Modus, "
 "da es im Moment unmöglich ist, 4 Fotokameras in einem Spiel zu haben."
 
 #: rules.php:53
+=======
+"Im 4-Spieler-Modus hat nur ein Spieler das Licht, die anderen haben eine "
+"Kamera. Der Spieler mit dem Licht ist nur der Beaconator, er kann Ihnen nur "
+"in Gebäuden Licht geben."
+
+#: rules.php:54
+>>>>>>> dev
 =======
 "Im 4-Spieler-Modus hat nur ein Spieler das Licht, die anderen haben eine "
 "Kamera. Der Spieler mit dem Licht ist nur der Beaconator, er kann Ihnen nur "
@@ -477,7 +638,10 @@ msgstr ""
 "Spielbeginn auf der High School zufällig ausgewählt wird, und zwei Objekte "
 "auf der Asylum."
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> dev
 
 #: tracker.php:13
 msgid "Tracker of Phasmophobia"
@@ -580,4 +744,7 @@ msgstr "Yurei"
 #: tracker.php:155
 msgid "Oni"
 msgstr "Oni"
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
