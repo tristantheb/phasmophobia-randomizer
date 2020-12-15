@@ -16,32 +16,38 @@ class Hunter
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private ?int $id;
 
     /**
      * @ORM\Column(type="string", length=100)
      */
-    private $name;
+    private ?string $name;
 
     /**
      * @ORM\ManyToOne(targetEntity=Item::class)
      */
-    private $items;
+    private ?Item $items;
 
     /**
      * @ORM\OneToOne(targetEntity=Room::class, mappedBy="creator", cascade={"persist", "remove"})
      */
-    private $room;
+    private ?Room $room;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
      */
-    private $createdAt;
+    private ?DateTimeInterface $createdAt;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
      */
-    private $updatedAt;
+    private ?DateTimeInterface $updatedAt;
+
+    public function __construct()
+    {
+        $this->setCreatedAt(new \DateTime());
+        $this->setUpdatedAt(new \DateTime());
+    }
 
     public function getId(): ?int
     {

@@ -16,28 +16,34 @@ class Room
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private ?int $id;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $roomNumber;
+    private ?int $roomNumber;
 
     /**
      * @ORM\OneToOne(targetEntity=Hunter::class, inversedBy="room", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
-    private $creator;
+    private ?Hunter $creator;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
      */
-    private $createdAt;
+    private ?DateTimeInterface $createdAt;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
      */
-    private $updatedAt;
+    private ?DateTimeInterface $updatedAt;
+
+    public function __construct()
+    {
+        $this->setCreatedAt(new \DateTime());
+        $this->setUpdatedAt(new \DateTime());
+    }
 
     public function getId(): ?int
     {
