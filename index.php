@@ -19,11 +19,6 @@ if (!file_exists($fileItems)) {
     <h1>Phasmophobia Randomizer</h1>
     <p><?php _e('Generate a game of investigation and ghost hunting in a totally random way.', 'lang') ?></p>
   </header>
-  <br>
-  <p class="info-box w-50 m-auto">
-    → The site uses the development branch of the game, please pass your game in Beta version in the Steam properties of the game to get the Prison.<br>
-    → La site utilise la branche de développement du jeu, veuillez passer votre jeu en version Bêta dans les propriétés Steam du jeu pour avoir la Prison.
-  </p>
   <main>
     <section class="table_game">
       <noscript class="error-box"><?php _e('Javascript is disabled on your browser. To use this site, you need to have Javascript enabled and running or active it.', 'lang') ?></noscript>
