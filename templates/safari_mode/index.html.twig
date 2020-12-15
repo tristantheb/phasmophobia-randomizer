@@ -1,0 +1,117 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<main>
+		<section class="table_game">
+			<noscript class="error-box">Javascript is disabled on your browser. To use this site, you need to have Javascript enabled and running or active it.</noscript>
+			<p id="errBlock" class="error-box">&nbsp;</p>
+			<p class="t-center">
+				<button id="gen_map">
+					<i class="fa fa-dice"></i>
+					Roll map</button>
+			</p>
+			<p class="t-center">
+				<label class="check" for="wheelAnim">Enable wheel animation?</label><input id="wheelAnim" type="checkbox"></p>
+		</section>
+		<section class="table_game">
+			<h2>Safari photo Game - Randomize the hunt</h2>
+			<form id="safari_form">
+				<div class="row">
+					<div class="col-1">
+						<label for="safariOne">
+							<span>First hunter:</span>
+							<input id="safariOne" name="safariOne" type="text" autocomplete="off">
+						</label>
+					</div>
+					<div class="col-4">
+						<p class="t-center mt-0"><input type="button" data-itemadd="1" value="Add item to hunter one"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-1">
+						<label for="safariTwo">
+							<span>Second hunter:</span>
+							<input id="safariTwo" name="safariTwo" type="text" autocomplete="off">
+						</label>
+					</div>
+					<div class="col-4">
+						<p class="t-center mt-0"><input type="button" data-itemadd="2" value="Add item to hunter two"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-1">
+						<label for="safariThree">
+							<span>Third hunter:</span>
+							<input id="safariThree" name="safariThree" type="text" autocomplete="off">
+						</label>
+					</div>
+					<div class="col-4">
+						<p class="t-center mt-0"><input type="button" data-itemadd="3" value="Add item to hunter three"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-1">
+						<label for="safariFourth">
+							<span>Fourth hunter:</span>
+							<input id="safariFourth" name="safariFourth" type="text" autocomplete="off">
+						</label>
+					</div>
+					<div class="col-4">
+						<p class="t-center mt-0"><input type="button" data-itemadd="4" value="Add item to hunter fourth"></p>
+					</div>
+				</div>
+				<input type="submit" value="Generate the game">
+			</form>
+		</section>
+		<section class="table_game">
+			<h2>Results</h2>
+			<h3 id="map_name"></h3>
+			<div class="row">
+				<div class="col-4" id="hunter-1">
+					<p class="hunter_name t-center">Hunter name</p>
+					<ul>
+						<li>Item list</li>
+					</ul>
+				</div>
+				<div class="col-4" id="hunter-2">
+					<p class="hunter_name t-center">Hunter name</p>
+					<ul>
+						<li>Item list</li>
+					</ul>
+				</div>
+				<div class="col-4" id="hunter-3">
+					<p class="hunter_name t-center">Hunter name</p>
+					<ul>
+						<li>Item list</li>
+					</ul>
+				</div>
+				<div class="col-4" id="hunter-4">
+					<p class="hunter_name t-center">Hunter name</p>
+					<ul>
+						<li>Item list</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+	<div id="animated_block">
+		<h2 id="wheel_hunter">&nbsp;</h2>
+		<div class="wheel_block table_game">
+			<img id="wheel" src="img/wheel.svg" alt="Wheel of fortune">
+			<p id="animated_text" class="t-center">&nbsp;</p>
+		</div>
+	</div>
+	<div class="orb">&nbsp;</div>
+{% endblock %}
+
+{% block javascripts %}
+	<script defer src="{{ asset('js/jquery.min.js') }}"></script>
+	<script defer src="{{ asset('js/utils.min.js') }}"></script>
+	<script defer src="{{ asset('js/safari_items.js') }}"></script>
+	<script defer src="{{ asset('js/lang/items_en.js') }}"></script>
+	<script defer src="{{ asset('js/maps.js') }}"></script>
+	<script defer src="{{ asset('js/Hunter.min.js') }}"></script>
+	<script defer src="{{ asset('js/AppHunt.min.js') }}"></script>
+	<script defer src="{{ asset('js/AppSafari.min.js') }}"></script>
+	<script defer src="{{ asset('js/index.min.js') }}"></script>
+{% endblock %}

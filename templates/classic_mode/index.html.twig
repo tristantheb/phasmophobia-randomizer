@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<main>
+		<section class="table_game">
+			<noscript class="error-box">Javascript is disabled on your browser. To use this site, you need to have Javascript enabled and running or active it.</noscript>
+			<p id="errBlock" class="error-box">&nbsp;</p>
+			<p class="t-center">
+				<button id="gen_map">
+					<i class="fa fa-dice"></i>
+					Roll map</button>
+			</p>
+			<p class="t-center">
+				<label class="check" for="wheelAnim">Enable wheel animation?</label><input id="wheelAnim" type="checkbox"></p>
+		</section>
+		<section class="table_game">
+			{{ form(classicForm) }}
+				<hr>
+				<h2>Classic game - Randomize the hunt</h2>
+				<form id="huntForm">
+					<label for="hunterOne">
+						<span>First hunter:</span>
+						<input id="hunterOne" name="hunterOne" type="text" autocomplete="off">
+					</label>
+					<label for="hunterTwo">
+						<span>Second hunter:</span>
+						<input id="hunterTwo" name="hunterTwo" type="text" autocomplete="off">
+					</label>
+					<label for="hunterThree">
+						<span>Third hunter:</span>
+						<input id="hunterThree" name="hunterThree" type="text" autocomplete="off">
+					</label>
+					<label for="hunterFour">
+						<span>Fourth hunter:</span>
+						<input id="hunterFour" name="hunterFour" type="text" autocomplete="off">
+					</label>
+					<label for="itemsNumber">
+						<span>Number of items to generate:</span>
+						<select id="itemsNumber" autocomplete="off">
+							<option>Choose number of items (default 3)</option>
+							<option value="1">1 item + 1 light</option>
+							<option value="2">2 items + 1 light</option>
+							<option value="3" selected>3 items + 1 light</option>
+							<option value="4">4 items + 1 light</option>
+							<option value="5">5 items + 1 light</option>
+						</select>
+					</label>
+					<input type="submit" value="Generate the game">
+				</form>
+			</section>
+			<section class="table_game">
+				<h2>Results</h2>
+				<h3 id="map_name"></h3>
+				<div class="row">
+					<div class="col-4" id="hunter-1">
+						<p class="hunter_name t-center">Hunter name</p>
+						<ul>
+							<li>Item list</li>
+						</ul>
+					</div>
+					<div class="col-4" id="hunter-2">
+						<p class="hunter_name t-center">Hunter name</p>
+						<ul>
+							<li>Item list</li>
+						</ul>
+					</div>
+					<div class="col-4" id="hunter-3">
+						<p class="hunter_name t-center">Hunter name</p>
+						<ul>
+							<li>Item list</li>
+						</ul>
+					</div>
+					<div class="col-4" id="hunter-4">
+						<p class="hunter_name t-center">Hunter name</p>
+						<ul>
+							<li>Item list</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div id="animated_block">
+			<h2 id="wheel_hunter">&nbsp;</h2>
+			<div class="wheel_block table_game">
+				<img id="wheel" src="img/wheel.svg" alt="Wheel of fortune">
+				<p id="animated_text" class="t-center">&nbsp;</p>
+			</div>
+		</div>
+		<div class="orb">&nbsp;</div>
+	{% endblock %}
+
+	{% block javascripts %}
+		<script defer src="{{ asset('js/jquery.min.js') }}"></script>
+		<script defer src="{{ asset('js/utils.min.js') }}"></script>
+		<script defer src="{{ asset('js/safari_items.js') }}"></script>
+		<script defer src="{{ asset('js/lang/items_en.js') }}"></script>
+		<script defer src="{{ asset('js/maps.js') }}"></script>
+		<script defer src="{{ asset('js/Hunter.min.js') }}"></script>
+		<script defer src="{{ asset('js/AppHunt.min.js') }}"></script>
+		<script defer src="{{ asset('js/AppSafari.min.js') }}"></script>
+		<script defer src="{{ asset('js/index.min.js') }}"></script>
+	{% endblock %}

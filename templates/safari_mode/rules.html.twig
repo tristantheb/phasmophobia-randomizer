@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<main>
+		<section class="table_game rules">
+			<h2>Safari photo Game</h2>
+			<h4>Objectives</h4>
+			<p>
+				The objectives to take at least
+				<strong>a picture of the entity</strong>
+				and
+				<strong>to determine its nature</strong>
+				using the objects acquired by the randomizer.
+				<strong>The player(s)</strong>
+				can be mistaken about the nature of the entity but
+				<strong>must imperatively take its photo (validated in the journal)</strong>
+				before leaving the game.<br>
+				You get a randomly chosen light source before the game starts. The player(s) will have a camera, a lighter and a go pro in multiplayer.<br>
+				To unlock the right to obtain a random object, the player must succeed in taking a photo validated in the diary (interaction, ghost, dirty water, print, bone...) and/or pass a secondary objective of the board in the truck. Each additional validated photo or secondary objective gives the player the right to obtain a new random object while respecting these restrictions:
+			</p>
+			<h4>Items per players</h4>
+			<p>
+				<i class="fa fa-chevron-right"></i>
+				1 player = 5 items<br>
+				<i class="fa fa-chevron-right"></i>
+				2 players = 3 items/players<br>
+				<i class="fa fa-chevron-right"></i>
+				3 players = 2 items/players<br><br>
+				<span class="t-red">It is forbidden to take any objects other than those assigned or to take those of other players.</span>
+			</p>
+			<p class="info-box">
+				<i class="fa fa-info-circle"></i>
+				In 4-player mode, only one player has the light, the others have a camera. The player with the light is only the Beaconator, he can only give you light in buildings.
+			</p>
+			<p class="info-box">
+				<i class="fa fa-info-circle"></i>
+				Special cases: Solo, the player has the right to one object to be randomized before the start of the game on High School, and two objects on Asylum.
+			</p>
+		</section>
+	</main>
+{% endblock %}

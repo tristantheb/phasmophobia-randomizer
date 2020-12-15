@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<main>
+		<section class="table_game rules">
+			<h2>Classic game</h2>
+			<h4>Objectives</h4>
+			<p>
+				The objectives to take at least
+				<strong>a picture of the entity</strong>
+				and
+				<strong>to determine its nature</strong>
+				using the objects acquired by the randomizer.
+				<strong>The player(s)</strong>
+				can be mistaken about the nature of the entity but
+				<strong>must imperatively take its photo (validated in the journal)</strong>
+				before leaving the game.<br>
+				You get a randomly chosen light source before the game starts. The team will have ONE photo camera (others need to be dropped on the randomizer), a front camera in multiplayer for each players.<br>
+			</p>
+			<h4>Items per players</h4>
+			<p>
+				Objects are chosen randomly before the start of the game according to the number of players as follows:<br>
+				<i class="fa fa-chevron-right"></i>
+				1 player = 5 items<br>
+				<i class="fa fa-chevron-right"></i>
+				2 players = 3 items/players<br>
+				<i class="fa fa-chevron-right"></i>
+				3 players = 2 items/players<br>
+				<i class="fa fa-chevron-right"></i>
+				4 players = 1 item/players<br>
+				A photo camera for the whole team is provided at the beginning of the game in order to validate the entity's photo objective. A lighter is available as standard to avoid making the incense and candle unusable. In multiplayer, the players will each have to have a front camera.<br><br>
+				<span class="t-red">It is forbidden to take any objects other than those assigned or to take those of other players.</span>
+			</p>
+		</section>
+	</main>
+{% endblock %}

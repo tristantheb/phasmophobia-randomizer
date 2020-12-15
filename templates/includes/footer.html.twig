@@ -1,0 +1,76 @@
+<footer>
+	<div class="row m-auto w-80">
+		<div class="col-4 o-2">
+			<h4>Site navigation</h4>
+			<nav class="menu">
+				<ul>
+					<li class="menu-item">
+						<a href="{{ url('index') }}">
+							<i class="fa fa-home"></i>
+							Home page
+						</a>
+					</li>
+					<li class="menu-item">
+						<a href="{{ url('tracker') }}">
+							<i class="fa fa-search"></i>
+							Ghost (Un)Tracker
+						</a>
+					</li>
+					<li class="menu-item">
+						<a href="https://mantis.phasmo-randomizer.site/">
+							<i class="fa fa-bug"></i>
+							Report an issue
+						</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" onclick="openWind(this);return false;">
+							<i class="fa fa-external-link-alt"></i>
+							Open in external window
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col-2 o-1">
+			<p>
+				<strong>Phasmophobia Randomizer</strong>
+				© 2020, all rights reserved to tristantheb Production.</p>
+			<hr>
+			<p>
+				All content coming from the game Phasmophobia and being used on the site belongs to Kinetic Game.<br>
+				The idea for the randomizer comes from Insym and has been edited by GuzzLIVE.<br>
+				The conception and realization of the site and its scripts are done by tristantheb Production.
+			</p>
+		</div>
+		<div class="col-4 o-3">
+			<nav class="menu">
+				<h4>Social medias</h4>
+				<ul>
+					<li class="menu-item">
+						<a href="https://twitter.com/PhasmoRando">
+							<i class="fab fa-twitter"></i>
+							Phasmophobia Ranzomizer Twitter
+						</a>
+					</li>
+					<li class="menu-item">
+						<a href="https://discord.gg/5ft7rEkRUP">
+							<i class="fab fa-discord"></i>
+							Phasmophobia Ranzomizer Discord
+						</a>
+					</li>
+					<li class="menu-item">
+						<a href="https://discord.gg/phasmophobia">
+							<i class="fab fa-discord"></i>
+							Phasmophobia Official Discord
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</footer>
+<script>
+	function openWind() {
+window.open(window.location.href, "{{ page_title }}", "height=700px,toolbar=0,width=1300px");
+}
+</script>

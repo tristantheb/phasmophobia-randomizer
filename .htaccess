@@ -2,11 +2,5 @@ Options -Indexes
 
 RewriteEngine On
 
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE,QSA]
-
-ErrorDocument 404 https://%{HTTP_HOST}/not_found.php
-
-<filesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|svg|ttf)$">
-  Header set Cache-Control "max-age=2592000, public"
-</filesMatch>
+# transfere toutes les requetes vers le dossier public
+RewriteRule ^((?!public/).*)$ public/$1 [L,NC]

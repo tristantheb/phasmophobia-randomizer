@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<main>
+		<section class="table_game">
+			<h2>Choose our game mode</h2>
+			<p class="row">
+				<a href="{{ url('classic_mode') }}" class="btn">
+					<i class="fa fa-users"></i>
+					Classic game
+				</a>
+				<a href="{{ url('safari_mode') }}" class="btn">
+					<i class="fa fa-camera"></i>
+					Safari photo game
+				</a>
+			</p>
+		</section>
+		<section class="table_game">
+			<h2>Enter in a Room</h2>
+			{{ form(roomEnter) }}
+			</section>
+		</main>
+		<div id="animated_block">
+			<h2 id="wheel_hunter">&nbsp;</h2>
+			<div class="wheel_block table_game">
+				<img id="wheel" src="img/wheel.svg" alt="Wheel of fortune">
+				<p id="animated_text" class="t-center">&nbsp;</p>
+			</div>
+		</div>
+		<div class="orb">&nbsp;</div>
+	{% endblock %}
