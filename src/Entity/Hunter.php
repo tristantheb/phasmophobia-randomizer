@@ -29,11 +29,6 @@ class Hunter
     private ?Item $items;
 
     /**
-     * @ORM\OneToOne(targetEntity=Room::class, mappedBy="creator", cascade={"persist", "remove"})
-     */
-    private ?Room $room;
-
-    /**
      * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
      */
     private ?DateTimeInterface $createdAt;
@@ -74,23 +69,6 @@ class Hunter
     public function setItems(?Item $items): self
     {
         $this->items = $items;
-
-        return $this;
-    }
-
-    public function getRoom(): ?Room
-    {
-        return $this->room;
-    }
-
-    public function setRoom(Room $room): self
-    {
-        $this->room = $room;
-
-        // set the owning side of the relation if necessary
-        if ($room->getCreator() !== $this) {
-            $room->setCreator($this);
-        }
 
         return $this;
     }

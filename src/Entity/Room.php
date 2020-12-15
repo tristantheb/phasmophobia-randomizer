@@ -24,12 +24,6 @@ class Room
     private ?int $roomNumber;
 
     /**
-     * @ORM\OneToOne(targetEntity=Hunter::class, inversedBy="room", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private ?Hunter $creator;
-
-    /**
      * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
      */
     private ?DateTimeInterface $createdAt;
@@ -58,18 +52,6 @@ class Room
     public function setRoomNumber(int $roomNumber): self
     {
         $this->roomNumber = $roomNumber;
-
-        return $this;
-    }
-
-    public function getCreator(): ?Hunter
-    {
-        return $this->creator;
-    }
-
-    public function setCreator(Hunter $creator): self
-    {
-        $this->creator = $creator;
 
         return $this;
     }
