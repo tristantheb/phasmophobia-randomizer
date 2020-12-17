@@ -16,9 +16,9 @@ class ClassicModeType extends AbstractType
     {
         $builder
             ->add('hunter-1', TextType::class, ['label' => 'First hunter', 'mapped' => false])
-            ->add('hunter-2', TextType::class, ['label' => 'Second hunter', 'mapped' => false])
-            ->add('hunter-3', TextType::class, ['label' => 'Third hunter', 'mapped' => false])
-            ->add('hunter-4', TextType::class, ['label' => 'Fourth hunter', 'mapped' => false])
+            ->add('hunter-2', TextType::class, ['label' => 'Second hunter', 'mapped' => false, 'required' => false])
+            ->add('hunter-3', TextType::class, ['label' => 'Third hunter', 'mapped' => false, 'required' => false])
+            ->add('hunter-4', TextType::class, ['label' => 'Fourth hunter', 'mapped' => false, 'required' => false])
             ->add('maxItems', ChoiceType::class, [
                 'choices' => [
                     'Customize your item number' => null,
