@@ -20,7 +20,7 @@ class GameModeController extends AbstractController
      * @return Response
      * @throws Exception
      */
-    public function indexClasic(Request $request): Response
+    public function indexClassic(Request $request): Response
     {
         $room = $this->roomCreate();
 
@@ -38,7 +38,7 @@ class GameModeController extends AbstractController
     /**
      * @Route("/classic-mode/rules", name="classic_mode_rules")
      */
-    public function rulesClasic(): Response
+    public function rulesClassic(): Response
     {
         return $this->render('classic_mode/rules.html.twig', [
             'page_title' => 'Rules of Classic Phasmophobia Randomizer',
