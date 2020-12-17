@@ -42,7 +42,7 @@ class IndexController extends AbstractController
     }
 
     /**
-     * @Route("/room/{roomId}", name="room")
+     * @Route("/room/{roomId<^\d{6}$>}", name="room")
      * @param int $roomId
      * @return Response
      */
