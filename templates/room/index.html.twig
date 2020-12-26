@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<main>
+		<h3>{{ roomNumber }}</h3>
+		<section class="table_game">
+			<h2>Results</h2>
+			<h3 id="map_name"></h3>
+			<div class="row">
+				<div class="col-4" id="hunter-1">
+					<p class="hunter_name t-center">Hunter name</p>
+					<ul>
+						<li>Item list</li>
+					</ul>
+				</div>
+				<div class="col-4" id="hunter-2">
+					<p class="hunter_name t-center">Hunter name</p>
+					<ul>
+						<li>Item list</li>
+					</ul>
+				</div>
+				<div class="col-4" id="hunter-3">
+					<p class="hunter_name t-center">Hunter name</p>
+					<ul>
+						<li>Item list</li>
+					</ul>
+				</div>
+				<div class="col-4" id="hunter-4">
+					<p class="hunter_name t-center">Hunter name</p>
+					<ul>
+						<li>Item list</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+	<div class="orb">&nbsp;</div>
+{% endblock %}
+
+{% block javascripts %}
+	<script defer src="{{ asset('js/jquery.min.js') }}"></script>
+	<script defer src="{{ asset('js/utils.min.js') }}"></script>
+	<script defer src="{{ asset('js/safari_items.js') }}"></script>
+	<script defer src="{{ asset('js/lang/items_en.js') }}"></script>
+	<script defer src="{{ asset('js/maps.js') }}"></script>
+	<script defer src="{{ asset('js/Hunter.min.js') }}"></script>
+	<script defer src="{{ asset('js/AppHunt.min.js') }}"></script>
+	<script defer src="{{ asset('js/AppSafari.min.js') }}"></script>
+	<script defer src="{{ asset('js/index.min.js') }}"></script>
+{% endblock %}

@@ -10,6 +10,8 @@ use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 class GameModeController extends AbstractController
@@ -17,12 +19,17 @@ class GameModeController extends AbstractController
     /**
      * @Route("/classic-mode", name="classic_mode")
      * @param Request $request
+     * @param SessionInterface $session
      * @return Response
      * @throws Exception
      */
-    public function indexClassic(Request $request): Response
+    public function indexClassic(Request $request, SessionInterface $session): Response
     {
-        $room = $this->roomCreate();
+        $room = $session->get('roomId', null);
+        if ($room === null) {
+            $room = $this->roomCreate();
+            $room = $session->set('roomId', $room->getRoomNumber());
+        }
 
         $hunter = new Hunter();
         $classicForm = $this->createForm(ClassicModeType::class, $hunter);
@@ -31,7 +38,8 @@ class GameModeController extends AbstractController
             'page_title' => 'Classic - Phasmophobia Randomizer',
             'page_description' => 'Classic mode page description',
             'classicForm' => $classicForm->createView(),
-            'roomNumber' => $room->getRoomNumber()
+            'roomNumber' => $room->getRoomNumber(),
+            'gameType' => 'classic-mode'
         ]);
     }
 
@@ -48,11 +56,18 @@ class GameModeController extends AbstractController
 
     /**
      * @Route("/safari-mode", name="safari_mode")
+     * @param Request $request
+     * @param SessionInterface $session
+     * @return Response
      * @throws Exception
      */
-    public function indexSafari(): Response
+    public function indexSafari(Request $request, SessionInterface $session): Response
     {
-        $room = $this->roomCreate();
+        $room = $session->get('roomId', null);
+        if ($room === null) {
+            $room = $this->roomCreate();
+            $room = $session->set('roomId', $room->getRoomNumber());
+        }
 
         $hunter = new Hunter();
         $safariForm = $this->createForm(SafariModeType::class, $hunter);
@@ -61,7 +76,8 @@ class GameModeController extends AbstractController
             'page_title' => 'Safari - Phasmophobia Randomizer',
             'page_description' => 'Safari mode page description',
             'safariForm' => $safariForm->createView(),
-            'roomNumber' => $room->getRoomNumber()
+            'roomNumber' => $room->getRoomNumber(),
+            'gameType' => 'safari-mode'
         ]);
     }
 
@@ -73,6 +89,52 @@ class GameModeController extends AbstractController
         return $this->render('safari_mode/rules.html.twig', [
             'page_title' => 'Rules of Safari Phasmophobia Randomizer',
             'page_description' => 'Rules page description'
+        ]);
+    }
+
+    /**
+     * @Route("/close-game/{roomId}/{gameMode}", name="close_game")
+     * @param string $roomId
+     * @param string $gameMode
+     * @return Response
+     */
+    public function closeRoom(string $roomId, string $gameMode): Response
+    {
+        $response = $this->roomRemove($roomId);
+        if ($response) {
+            return $this->redirectToRoute('index');
+        }
+        return $this->redirect($gameMode);
+    }
+
+    /**
+     * @Route("/room/{roomId<^\d{6}$>}", name="room")
+     * @param int $roomId
+     * @return Response
+     */
+    public function room(int $roomId): Response
+    {
+        $room = $this->getDoctrine()->getRepository(Room::class)->findOneBy(["roomNumber" => $roomId]);
+
+        if (!$room) {
+            throw new NotFoundHttpException("The room does not exist");
+        }
+
+        return $this->render('room/index.html.twig', [
+            'page_title' => 'Phasmophobia Randomizer',
+            'page_description' => 'Your are entered inner a shared room !',
+            "roomNumber" => $roomId
+        ]);
+    }
+
+    /**
+     * @Route("/room-closed", name="room_closed")
+     */
+    public function roomClosed(): Response
+    {
+        return $this->render('/room/room_closed.html.twig', [
+            'page_title' => 'Phasmophobia Randomizer',
+            'page_description' => 'Server connection failed'
         ]);
     }
 
@@ -100,5 +162,23 @@ class GameModeController extends AbstractController
             }
         }
         return $room;
+    }
+
+    /**
+     * @param string $roomId
+     * @return bool
+     */
+    private function roomRemove(string $roomId): bool
+    {
+        $em = $this->getDoctrine()->getManager();
+        $room = $em->getRepository(Room::class)->findOneBy(["roomNumber" => $roomId]);
+
+        if ($room) {
+            $em->remove($room);
+            $em->flush();
+            return true;
+        }
+
+        return false;
     }
 }

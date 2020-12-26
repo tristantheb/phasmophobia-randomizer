@@ -11,13 +11,14 @@
 					<i class="fa fa-dice"></i>
 					Roll map
 				</button>
+				<a href="{{ url("close_game", {"roomId": roomNumber, "gameMode": gameType}) }}">Quit game</a>
 			</p>
 			<p class="t-center">
 			<label class="check" for="wheelAnim">Enable wheel animation?</label><input id="wheelAnim" type="checkbox"></p>
 		</section>
 		<section class="table_game">
-			{{ form(classicForm) }}
-			<hr>
+			{# TODO: form(classicForm) #}
+			<!--<hr>-->
 			<h2>Classic game - Randomize the hunt</h2>
 			<form id="huntForm">
 				<label for="hunterOne">

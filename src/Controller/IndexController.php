@@ -42,26 +42,6 @@ class IndexController extends AbstractController
     }
 
     /**
-     * @Route("/room/{roomId<^\d{6}$>}", name="room")
-     * @param int $roomId
-     * @return Response
-     */
-    public function room(int $roomId): Response
-    {
-        $room = $this->getDoctrine()->getRepository(Room::class)->findOneBy(["roomNumber" => $roomId]);
-
-        if (!$room) {
-            throw new NotFoundHttpException("The room does not exist");
-        }
-
-        return $this->render('room.html.twig', [
-            'page_title' => 'Phasmophobia Randomizer',
-            'page_description' => 'Your are entered inner a shared room !',
-            "roomNumber" => $roomId
-        ]);
-    }
-
-    /**
      * @Route("/tracker", name="tracker")
      */
     public function tracker(): Response

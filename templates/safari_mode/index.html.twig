@@ -2,6 +2,7 @@
 
 {% block body %}
 	<main>
+		<h3>{{ roomNumber }}</h3>
 		<section class="table_game">
 			<noscript class="error-box">Javascript is disabled on your browser. To use this site, you need to have Javascript enabled and running or active it.</noscript>
 			<p id="errBlock" class="error-box">&nbsp;</p>
@@ -9,6 +10,7 @@
 				<button id="gen_map">
 					<i class="fa fa-dice"></i>
 					Roll map</button>
+				<a href="{{ url("close_game", {"roomId": roomNumber, "gameMode": gameType}) }}">Quit game</a>
 			</p>
 			<p class="t-center">
 				<label class="check" for="wheelAnim">Enable wheel animation?</label><input id="wheelAnim" type="checkbox"></p>
@@ -111,7 +113,6 @@
 	<script defer src="{{ asset('js/lang/items_en.js') }}"></script>
 	<script defer src="{{ asset('js/maps.js') }}"></script>
 	<script defer src="{{ asset('js/Hunter.min.js') }}"></script>
-	<script defer src="{{ asset('js/AppHunt.min.js') }}"></script>
 	<script defer src="{{ asset('js/AppSafari.min.js') }}"></script>
 	<script defer src="{{ asset('js/index.min.js') }}"></script>
 {% endblock %}
