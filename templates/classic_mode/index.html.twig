@@ -17,9 +17,9 @@
 			<label class="check" for="wheelAnim">Enable wheel animation?</label><input id="wheelAnim" type="checkbox"></p>
 		</section>
 		<section class="table_game">
-			{# TODO: form(classicForm) #}
-			<!--<hr>-->
 			<h2>Classic game - Randomize the hunt</h2>
+			{{ form(classicForm, {'attr': {'id': 'formHunt'}}) }}
+			<!--
 			<form id="huntForm">
 				<label for="hunterOne">
 					<span>First hunter:</span>
@@ -50,6 +50,7 @@
 				</label>
 				<input type="submit" value="Generate the game">
 			</form>
+			-->
 		</section>
 		<section class="table_game">
 			<h2>Results</h2>
@@ -95,11 +96,9 @@
 {% block javascripts %}
 	<script defer src="{{ asset('js/jquery.min.js') }}"></script>
 	<script defer src="{{ asset('js/utils.min.js') }}"></script>
-	<script defer src="{{ asset('js/safari_items.js') }}"></script>
 	<script defer src="{{ asset('js/lang/items_en.js') }}"></script>
 	<script defer src="{{ asset('js/maps.js') }}"></script>
 	<script defer src="{{ asset('js/Hunter.min.js') }}"></script>
 	<script defer src="{{ asset('js/AppHunt.min.js') }}"></script>
-	<script defer src="{{ asset('js/AppSafari.min.js') }}"></script>
-	<script defer src="{{ asset('js/index.min.js') }}"></script>
+	<script defer src="{{ asset('js/indexHunt.js') }}"></script> <!-- TODO: Set .min on file name -->
 {% endblock %}

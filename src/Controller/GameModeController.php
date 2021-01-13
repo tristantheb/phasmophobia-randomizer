@@ -28,7 +28,8 @@ class GameModeController extends AbstractController
         $room = $session->get('roomId', null);
         if ($room === null) {
             $room = $this->roomCreate();
-            $room = $session->set('roomId', $room->getRoomNumber());
+            $session->set('roomId', $room->getRoomNumber());
+            $room = $room->getRoomNumber();
         }
 
         $hunter = new Hunter();
@@ -38,7 +39,7 @@ class GameModeController extends AbstractController
             'page_title' => 'Classic - Phasmophobia Randomizer',
             'page_description' => 'Classic mode page description',
             'classicForm' => $classicForm->createView(),
-            'roomNumber' => $room->getRoomNumber(),
+            'roomNumber' => $room,
             'gameType' => 'classic-mode'
         ]);
     }
