@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
     appHunt.reset();
     let form = new FormData($formHunt);
     for (const entry of form.entries()) {
-      if (!!entry[1]) {
+      if (!!entry[1] && entry[0].includes("hunter")) {
         appHunt.setHunter(htmlEncode(entry[1]));
         canRender = true;
       }
