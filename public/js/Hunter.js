@@ -40,6 +40,11 @@ function Hunter() {
     return itemList[itemList.length-1][0];
   }
 
+  /**
+   * Get hunter as an object
+   * @return {{itemList: [], username}}
+   * @public
+   */
   this.getAsObject = function getAsObject() {
     return {
       username,
@@ -51,11 +56,10 @@ function Hunter() {
    * Check if username is a valid text
    * @param {*} value Any value to be checked
    * 
-   * @returns {undefined} True if good text, false if wrong text
+   * @returns {boolean} True if good text, false if wrong text
    * @private
    */
   function isValidName(value) {
-    if (typeof value != "string") return false;
-    return true;
+    return typeof value == "string";
   }
 }
