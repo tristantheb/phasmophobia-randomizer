@@ -2,7 +2,7 @@ const appHunt = new AppHunt();
 const TIMEOUT_DELAY = 5000;
 
 if (!localStorage.getItem("SHOW_ANIMATION")) {
-	localStorage.setItem("SHOW_ANIMATION", true);
+	localStorage.setItem("SHOW_ANIMATION", "true");
 }
 var SHOW_ANIMATION = localStorage.getItem("SHOW_ANIMATION") === "true" ? true : false;
 
@@ -10,7 +10,7 @@ var SHOW_ANIMATION = localStorage.getItem("SHOW_ANIMATION") === "true" ? true : 
  * Preloading page
  */
 document.addEventListener("DOMContentLoaded", function preload() {
-	var $links = document.querySelectorAll("link[rel=preload]");
+	let $links = document.querySelectorAll("link[rel=preload]");
 	$links.forEach(link => {
 		link.rel = "stylesheet"
 	});
@@ -24,10 +24,10 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
 	$wheelAnim.addEventListener("click", function changeCheck() {
 		if (this.checked) {
 			SHOW_ANIMATION = true;
-			localStorage.setItem("SHOW_ANIMATION", true);
+			localStorage.setItem("SHOW_ANIMATION", "true");
 		} else {
 			SHOW_ANIMATION = false;
-			localStorage.setItem("SHOW_ANIMATION", false);
+			localStorage.setItem("SHOW_ANIMATION", "false");
 		}
 	}, this);
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
 
 	// Check of activity
 	$select.addEventListener("change", function changeItems() {
-		var val = $select.selectedIndex;
+		let val = $select.selectedIndex;
 		appHunt.setMaxItems($select[val].value);
 	});
 
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
  * @param {object} app The app object
  */
 function htmlRender(app) {
-	var hunters = app.getHunters(), data = "";
+	var hunters = app.getHunters();
 	localStorage.clear();
 	localStorage.setItem("SHOW_ANIMATION", SHOW_ANIMATION);
 	for (let i = 0; i < hunters.length; i++) {
@@ -162,28 +162,6 @@ function animateRender(callback, app) {
 		$('#animated_text').html('&nbsp;');
 		callback(app);
 	}, TIMEOUT_DELAY * step);
-}
-
-/**
- * Animate the render of item picker
- * @param {string} callback A callback function name
- * @param {object} hunter The targeted hunter
- */
-function animateOneItem(callback, app, hunter) {
-	$('#animated_block').fadeIn(100);
-
-	let item = checkOnDualList(hunter.getLastItem(), items);
-	item = !item ? checkOnDualList(hunter.getLastItem(), itemsLights) : item;
-	window.setTimeout(textRender, TIMEOUT_DELAY, hunter.getName(), item);
-
-	playAudio("Heartbeat", 0.5, true, TIMEOUT_DELAY * 2);
-
-	window.setTimeout(() => {
-		$('#animated_block').fadeOut(100);
-		$('#wheel_hunter').html('&nbsp;');
-		$('#animated_text').html('&nbsp;');
-		callback(app);
-	}, TIMEOUT_DELAY * 2);
 }
 
 /**

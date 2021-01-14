@@ -61,7 +61,7 @@ function AppHunt() {
      * @public
      */
     this.setHunter = function setHunter(name) {
-        var hunter = new Hunter();
+        let hunter = new Hunter();
         hunter.setName(name);
         generateItems(maxItems, hunter);
         hunters.push(hunter);
