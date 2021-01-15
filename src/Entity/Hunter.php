@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\HunterRepository;
 use DateTimeInterface;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -24,7 +26,7 @@ class Hunter
     private ?string $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Item::class)
+     * @ORM\ManyToMany(targetEntity=Item::class)
      */
     private ?Item $items;
 
@@ -38,10 +40,16 @@ class Hunter
      */
     private ?DateTimeInterface $updatedAt;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Room::class, inversedBy="hunters")
+     */
+    private $currentRoom;
+
     public function __construct()
     {
         $this->setCreatedAt(new \DateTime());
         $this->setUpdatedAt(new \DateTime());
+        $this->currentRoom = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -93,6 +101,30 @@ class Hunter
     public function setUpdatedAt(DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Room[]
+     */
+    public function getCurrentRoom(): Collection
+    {
+        return $this->currentRoom;
+    }
+
+    public function addCurrentRoom(Room $currentRoom): self
+    {
+        if (!$this->currentRoom->contains($currentRoom)) {
+            $this->currentRoom[] = $currentRoom;
+        }
+
+        return $this;
+    }
+
+    public function removeCurrentRoom(Room $currentRoom): self
+    {
+        $this->currentRoom->removeElement($currentRoom);
 
         return $this;
     }

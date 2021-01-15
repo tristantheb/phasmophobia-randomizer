@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\RoomRepository;
 use DateTimeInterface;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -33,10 +35,21 @@ class Room
      */
     private ?DateTimeInterface $updatedAt;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Hunter::class, mappedBy="currentRoom")
+     */
+    private ?ArrayCollection $hunters;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Map::class, inversedBy="roomId")
+     */
+    private ?Map $map;
+
     public function __construct()
     {
         $this->setCreatedAt(new \DateTime());
         $this->setUpdatedAt(new \DateTime());
+        $this->hunters = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -76,6 +89,45 @@ class Room
     public function setUpdatedAt(DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Hunter[]
+     */
+    public function getHunters(): Collection
+    {
+        return $this->hunters;
+    }
+
+    public function addHunter(Hunter $hunter): self
+    {
+        if (!$this->hunters->contains($hunter)) {
+            $this->hunters[] = $hunter;
+            $hunter->addCurrentRoom($this);
+        }
+
+        return $this;
+    }
+
+    public function removeHunter(Hunter $hunter): self
+    {
+        if ($this->hunters->removeElement($hunter)) {
+            $hunter->removeCurrentRoom($this);
+        }
+
+        return $this;
+    }
+
+    public function getMap(): ?Map
+    {
+        return $this->map;
+    }
+
+    public function setMap(?Map $mapName): self
+    {
+        $this->map = $mapName;
 
         return $this;
     }
