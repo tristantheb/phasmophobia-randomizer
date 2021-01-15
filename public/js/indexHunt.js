@@ -60,14 +60,16 @@ document.addEventListener("DOMContentLoaded", function pageLoaded() {
 		}
 
 		fetch(
-			'/submit' + window.location.pathname + "/" + $roomId,
+			'/submit/' + $roomId,
 			{
-				method: "post",
+				method: 'post',
 				'X-Requested-With': 'XMLHttpRequest',
 				body: appHunt.getAll()
 			}
 		).then(r => {
-			console.log(r);
+			if(r.status !== 200 || r.status !== 302) {
+				throwError("Unable to contact the database to share the print run.");
+			}
 		});
 
 		if (canRender) {
