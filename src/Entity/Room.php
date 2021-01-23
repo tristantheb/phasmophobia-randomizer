@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\RoomRepository;
-use DateTimeInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -18,37 +17,25 @@ class Room
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private ?int $id;
+    private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", length=6)
      */
-    private ?int $roomNumber;
+    private $roomId;
 
     /**
-     * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
+     * @ORM\Column(type="string", length=100, nullable=true)
      */
-    private ?DateTimeInterface $createdAt;
+    private $mapName;
 
     /**
-     * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
+     * @ORM\ManyToMany(targetEntity=Hunter::class, inversedBy="rooms")
      */
-    private ?DateTimeInterface $updatedAt;
-
-    /**
-     * @ORM\ManyToMany(targetEntity=Hunter::class, mappedBy="currentRoom")
-     */
-    private ?ArrayCollection $hunters;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=Map::class, inversedBy="roomId")
-     */
-    private ?Map $map;
+    private $hunters;
 
     public function __construct()
     {
-        $this->setCreatedAt(new \DateTime());
-        $this->setUpdatedAt(new \DateTime());
         $this->hunters = new ArrayCollection();
     }
 
@@ -57,38 +44,26 @@ class Room
         return $this->id;
     }
 
-    public function getRoomNumber(): ?int
+    public function getRoomId(): ?int
     {
-        return $this->roomNumber;
+        return $this->roomId;
     }
 
-    public function setRoomNumber(int $roomNumber): self
+    public function setRoomId(int $roomId): self
     {
-        $this->roomNumber = $roomNumber;
+        $this->roomId = $roomId;
 
         return $this;
     }
 
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getMapName(): ?string
     {
-        return $this->createdAt;
+        return $this->mapName;
     }
 
-    public function setCreatedAt(DateTimeInterface $createdAt): self
+    public function setMapName(?string $mapName): self
     {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    }
-
-    public function getUpdatedAt(): ?DateTimeInterface
-    {
-        return $this->updatedAt;
-    }
-
-    public function setUpdatedAt(DateTimeInterface $updatedAt): self
-    {
-        $this->updatedAt = $updatedAt;
+        $this->mapName = $mapName;
 
         return $this;
     }
@@ -105,7 +80,6 @@ class Room
     {
         if (!$this->hunters->contains($hunter)) {
             $this->hunters[] = $hunter;
-            $hunter->addCurrentRoom($this);
         }
 
         return $this;
@@ -113,21 +87,7 @@ class Room
 
     public function removeHunter(Hunter $hunter): self
     {
-        if ($this->hunters->removeElement($hunter)) {
-            $hunter->removeCurrentRoom($this);
-        }
-
-        return $this;
-    }
-
-    public function getMap(): ?Map
-    {
-        return $this->map;
-    }
-
-    public function setMap(?Map $mapName): self
-    {
-        $this->map = $mapName;
+        $this->hunters->removeElement($hunter);
 
         return $this;
     }

@@ -25,10 +25,10 @@ class HunterRepository extends ServiceEntityRepository
     /*
     public function findByExampleField($value)
     {
-        return $this->createQueryBuilder('h')
-            ->andWhere('h.exampleField = :val')
+        return $this->createQueryBuilder('g')
+            ->andWhere('g.exampleField = :val')
             ->setParameter('val', $value)
-            ->orderBy('h.id', 'ASC')
+            ->orderBy('g.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
@@ -39,8 +39,8 @@ class HunterRepository extends ServiceEntityRepository
     /*
     public function findOneBySomeField($value): ?Hunter
     {
-        return $this->createQueryBuilder('h')
-            ->andWhere('h.exampleField = :val')
+        return $this->createQueryBuilder('g')
+            ->andWhere('g.exampleField = :val')
             ->setParameter('val', $value)
             ->getQuery()
             ->getOneOrNullResult()

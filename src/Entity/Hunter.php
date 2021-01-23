@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\HunterRepository;
-use DateTimeInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -18,38 +17,27 @@ class Hunter
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private ?int $id;
+    private $id;
 
     /**
      * @ORM\Column(type="string", length=100)
      */
-    private ?string $name;
+    private $username;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Item::class)
+     * @ORM\ManyToMany(targetEntity=Item::class, mappedBy="hunters")
      */
-    private ?Item $items;
+    private $items;
 
     /**
-     * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
+     * @ORM\ManyToMany(targetEntity=Room::class, mappedBy="hunters")
      */
-    private ?DateTimeInterface $createdAt;
-
-    /**
-     * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
-     */
-    private ?DateTimeInterface $updatedAt;
-
-    /**
-     * @ORM\ManyToMany(targetEntity=Room::class, inversedBy="hunters")
-     */
-    private $currentRoom;
+    private $rooms;
 
     public function __construct()
     {
-        $this->setCreatedAt(new \DateTime());
-        $this->setUpdatedAt(new \DateTime());
-        $this->currentRoom = new ArrayCollection();
+        $this->items = new ArrayCollection();
+        $this->rooms = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -57,50 +45,41 @@ class Hunter
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getUsername(): ?string
     {
-        return $this->name;
+        return $this->username;
     }
 
-    public function setName(string $name): self
+    public function setUsername(string $username): self
     {
-        $this->name = $name;
+        $this->username = $username;
 
         return $this;
     }
 
-    public function getItems(): ?Item
+    /**
+     * @return Collection|Item[]
+     */
+    public function getItems(): Collection
     {
         return $this->items;
     }
 
-    public function setItems(?Item $items): self
+    public function addItem(Item $item): self
     {
-        $this->items = $items;
+        if (!$this->items->contains($item)) {
+            $this->items[] = $item;
+            $item->addHunter($this);
+        }
 
         return $this;
     }
 
-    public function getCreatedAt(): ?DateTimeInterface
+    public function removeItem(Item $item): self
     {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(DateTimeInterface $createdAt): self
-    {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    }
-
-    public function getUpdatedAt(): ?DateTimeInterface
-    {
-        return $this->updatedAt;
-    }
-
-    public function setUpdatedAt(DateTimeInterface $updatedAt): self
-    {
-        $this->updatedAt = $updatedAt;
+        if ($this->items->removeElement($item)) {
+            $item->removeHunter($this);
+        }
 
         return $this;
     }
@@ -108,23 +87,26 @@ class Hunter
     /**
      * @return Collection|Room[]
      */
-    public function getCurrentRoom(): Collection
+    public function getRooms(): Collection
     {
-        return $this->currentRoom;
+        return $this->rooms;
     }
 
-    public function addCurrentRoom(Room $currentRoom): self
+    public function addRoom(Room $room): self
     {
-        if (!$this->currentRoom->contains($currentRoom)) {
-            $this->currentRoom[] = $currentRoom;
+        if (!$this->rooms->contains($room)) {
+            $this->rooms[] = $room;
+            $room->addHunter($this);
         }
 
         return $this;
     }
 
-    public function removeCurrentRoom(Room $currentRoom): self
+    public function removeRoom(Room $room): self
     {
-        $this->currentRoom->removeElement($currentRoom);
+        if ($this->rooms->removeElement($room)) {
+            $room->removeHunter($this);
+        }
 
         return $this;
     }

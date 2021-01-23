@@ -28,8 +28,13 @@ class GameModeController extends AbstractController
         $room = $session->get('roomId', null);
         if ($room === null) {
             $room = $this->roomCreate();
-            $session->set('roomId', $room->getRoomNumber());
-            $room = $room->getRoomNumber();
+            $session->set('roomId', $room->getRoomId());
+        } else {
+            $room = $this->getDoctrine()->getRepository(Room::class)->findOneBy(["roomId" => $room]);
+            if ($room === null) {
+                $session->remove('roomId');
+                $this->redirectToRoute('classic_mode');
+            }
         }
 
         $hunter = new Hunter();
@@ -39,7 +44,7 @@ class GameModeController extends AbstractController
             'page_title' => 'Classic - Phasmophobia Randomizer',
             'page_description' => 'Classic mode page description',
             'classicForm' => $classicForm->createView(),
-            'roomNumber' => $room,
+            'roomNumber' => $room->getRoomId(),
             'gameType' => 'classic-mode'
         ]);
     }
@@ -67,7 +72,7 @@ class GameModeController extends AbstractController
         $room = $session->get('roomId', null);
         if ($room === null) {
             $room = $this->roomCreate();
-            $room = $session->set('roomId', $room->getRoomNumber());
+            $room = $session->set('roomId', $room->getRoomId());
         }
 
         $hunter = new Hunter();
@@ -77,7 +82,7 @@ class GameModeController extends AbstractController
             'page_title' => 'Safari - Phasmophobia Randomizer',
             'page_description' => 'Safari mode page description',
             'safariForm' => $safariForm->createView(),
-            'roomNumber' => $room->getRoomNumber(),
+            'roomNumber' => $room->getRoomId(),
             'gameType' => 'safari-mode'
         ]);
     }
@@ -94,7 +99,7 @@ class GameModeController extends AbstractController
     }
 
     /**
-     * @Route("/close-game/{roomId}/{gameMode}", name="close_game")
+     * @Route("/close-game/{roomId<^\d{6}$>}/{gameMode}", name="close_game")
      * @param string $roomId
      * @param string $gameMode
      * @return Response
@@ -115,7 +120,7 @@ class GameModeController extends AbstractController
      */
     public function room(int $roomId): Response
     {
-        $room = $this->getDoctrine()->getRepository(Room::class)->findOneBy(["roomNumber" => $roomId]);
+        $room = $this->getDoctrine()->getRepository(Room::class)->findOneBy(["roomId" => $roomId]);
 
         if (!$room) {
             throw new NotFoundHttpException("The room does not exist");
@@ -152,12 +157,12 @@ class GameModeController extends AbstractController
         }
 
         $room = new Room();
-        $room->setRoomNumber(0);
-        while ($room->getRoomNumber() === 0) {
-            $nb = random_int(1, 999999);
+        $room->setRoomId(0);
+        while ($room->getRoomId() === 0) {
+            $nb = random_int(100000, 999999);
             if (!in_array($nb, $roomList)) {
                 $manager = $this->getDoctrine()->getManager();
-                $room->setRoomNumber($nb);
+                $room->setRoomId($nb);
                 $manager->persist($room);
                 $manager->flush();
             }
@@ -172,7 +177,7 @@ class GameModeController extends AbstractController
     private function roomRemove(string $roomId): bool
     {
         $em = $this->getDoctrine()->getManager();
-        $room = $em->getRepository(Room::class)->findOneBy(["roomNumber" => $roomId]);
+        $room = $em->getRepository(Room::class)->findOneBy(["roomId" => $roomId]);
 
         if ($room) {
             $em->remove($room);

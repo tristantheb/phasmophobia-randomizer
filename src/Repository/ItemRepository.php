@@ -25,10 +25,10 @@ class ItemRepository extends ServiceEntityRepository
     /*
     public function findByExampleField($value)
     {
-        return $this->createQueryBuilder('i')
-            ->andWhere('i.exampleField = :val')
+        return $this->createQueryBuilder('g')
+            ->andWhere('g.exampleField = :val')
             ->setParameter('val', $value)
-            ->orderBy('i.id', 'ASC')
+            ->orderBy('g.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
@@ -39,8 +39,8 @@ class ItemRepository extends ServiceEntityRepository
     /*
     public function findOneBySomeField($value): ?Item
     {
-        return $this->createQueryBuilder('i')
-            ->andWhere('i.exampleField = :val')
+        return $this->createQueryBuilder('g')
+            ->andWhere('g.exampleField = :val')
             ->setParameter('val', $value)
             ->getQuery()
             ->getOneOrNullResult()

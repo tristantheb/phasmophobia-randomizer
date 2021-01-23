@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ItemRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -23,9 +25,14 @@ class Item
     private $name;
 
     /**
-     * @ORM\Column(type="smallint")
+     * @ORM\ManyToMany(targetEntity=Hunter::class, inversedBy="items")
      */
-    private $max_drop;
+    private $hunters;
+
+    public function __construct()
+    {
+        $this->hunters = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -44,14 +51,26 @@ class Item
         return $this;
     }
 
-    public function getMaxDrop(): ?int
+    /**
+     * @return Collection|Hunter[]
+     */
+    public function getHunters(): Collection
     {
-        return $this->max_drop;
+        return $this->hunters;
     }
 
-    public function setMaxDrop(int $max_drop): self
+    public function addHunter(Hunter $hunter): self
     {
-        $this->max_drop = $max_drop;
+        if (!$this->hunters->contains($hunter)) {
+            $this->hunters[] = $hunter;
+        }
+
+        return $this;
+    }
+
+    public function removeHunter(Hunter $hunter): self
+    {
+        $this->hunters->removeElement($hunter);
 
         return $this;
     }
