@@ -1,4 +1,5 @@
 var maps = [
+  "Willow Street House",
   "Tanglewood Street House",
   "Edgefield Street House",
   "Ridgeview Road House",

@@ -59,6 +59,16 @@ function ghostPowers() {
             'name': "Oni",
             'power': "L'activité de l'Oni (actions / chasse) augmente s'il y a des gens dans sa pièce. Il fera voler des objets autour de sa victime. Si sa victime voit un objet voler, elle deviendra la cible de l'Oni.",
             'weakness': "L'augmentation de l'activité du Oni permet également de le trouver plus facilement."
+        },
+        'yokai': {
+            'name': "Yokai",
+            'power': "Le Yōkai est un démon japonais qui n'aime pas être dérangé par les personnes qui parlent. Parler à proximité d'un Yōkai augmente les chances qu'il vous attaque.",
+            'weakness': "Le Yōkai est sensible aux sons, il chasse les personnes proches de lui, quand ces personnes font du bruit. Il ne peut pas entendre de loin, et ne chasse qu'au son."
+        },
+        'hantu': {
+            'name': "Hantu",
+            'power': "Le Hantu vit dans les zones chaudes, et chasse en périodes froides. Il profite du froid pour pouvoir se déplacer rapidement.",
+            'weakness': "Le Hantu n'est cependant pas un fantôme qui chasse quand il fait chaud. L'emmener dans une zone tempérée le rend vulnérable, il perd en vitesse."
         }
     }
 }

@@ -3,4 +3,7 @@ vendor/
 google*
 robots.txt
 sitemap.xml
-.github*
+.env*
+.idea/
+bin/
+var/
