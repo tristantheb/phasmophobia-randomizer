@@ -1,0 +1,11 @@
+{
+  "name": "PhasmoRandom",
+  "version": "0.4.4",
+  "homepage": "https://www.phasmo-randomizer.site/",
+  "bugs": "https://mantis.phasmo-randomizer.site/",
+  "license": "UNLICENSED",
+  "author": "Tristan <tristantheb@gmail.com>",
+  "dependencies": {
+    "deploy": "^1.0.3"
+  }
+}
