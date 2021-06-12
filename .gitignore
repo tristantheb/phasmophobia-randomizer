@@ -1,9 +1,11 @@
+.idea/
+bin/
 mantis/
+node_modules/
+var/
 vendor/
+.env*
+dploy.yaml
 google*
 robots.txt
 sitemap.xml
-.env*
-.idea/
-bin/
-var/
