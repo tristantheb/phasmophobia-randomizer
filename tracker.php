@@ -171,7 +171,7 @@ if (!file_exists($fileGhosts)) {
           <td data-evidence="ghost-writing"><?php _e("Ghost Writing", "lang") ?></td>
           <td data-evidence="spirit-box"><?php _e("Spirit Box", "lang") ?></td>
         </tr>
-        <tr id="yukai" class="evid_row">
+        <tr id="yokai" class="evid_row">
           <th><?php _e("Yokai", "lang") ?></th>
           <td></td>
           <td></td>
@@ -180,8 +180,8 @@ if (!file_exists($fileGhosts)) {
           <td data-evidence="ghost-writing"><?php _e("Ghost Writing", "lang") ?></td>
           <td data-evidence="spirit-box"><?php _e("Spirit Box", "lang") ?></td>
         </tr>
-        <tr id="handu" class="evid_row">
-          <th><?php _e("Handu", "lang") ?></th>
+        <tr id="hantu" class="evid_row">
+          <th><?php _e("Hantu", "lang") ?></th>
           <td></td>
           <td data-evidence="fingerprints"><?php _e("Fingerprints", "lang") ?></td>
           <td></td>
