@@ -193,6 +193,16 @@ function ghostEvidences() {
       'spirit-box',
       'ghost-writing',
       'emf',
+    ],
+    'yokai': [
+      'spirit-box',
+      'ghost-orbs',
+      'ghost-writing',
+    ],
+    'hantu': [
+      'fingerprints',
+      'ghost-orbs',
+      'ghost-writing',
     ]
   }
 }

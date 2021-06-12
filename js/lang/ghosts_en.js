@@ -59,6 +59,16 @@ function ghostPowers() {
             'name': "Oni",
             'power': "The activity of the Oni (actions / hunting) increases if there are people in his room. He will fly objects around his victim. If his victim sees an object being flown, he will become the Oni's target.",
             'weakness': "The increase in Oni's activity also makes it easier to find."
+        },
+        'yokai': {
+            'name': "Yokai",
+            'power': "The Yōkai is a Japanese demon that does not like to be disturbed by people talking. Talking in the vicinity of a Yōkai increases the chances that it will attack you.",
+            'weakness': "The Yōkai is sensitive to sound, and will chase away people close to it, when those people make noise. It cannot hear from a distance, and only hunts by sound."
+        },
+        'hantu': {
+            'name': "Hantu",
+            'power': "The Hantu lives in warm areas, and hunts in cold periods. It takes advantage of the cold to move quickly.",
+            'weakness': "However, the Hantu is not a ghost that hunts in hot weather. Taking it to a warm area makes it vulnerable, it loses speed."
         }
     }
 }

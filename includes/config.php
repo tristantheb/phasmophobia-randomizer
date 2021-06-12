@@ -8,4 +8,4 @@ if (file_exists('lang/' . $lang . '/lang.mo')) {
 } else {
 	$lang = "en";
 }
-$version = "0.4.3";
+$version = "0.4.4";
